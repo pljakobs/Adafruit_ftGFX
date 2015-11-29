@@ -126,7 +126,7 @@ int main( int argc, char** argv )
   fprintf(file,"const unsigned char %s_%s_%dptBitmaps[] PROGMEM = {\n", face->family_name, face->style_name, size);
  
   offset=0;
-  for(c=0x40;c<=255;c++){
+  for(c=0x20;c<=255;c++){
     if(FF_encoding[c]){
       error=FT_Load_Char(face, FF_encoding[c], FT_LOAD_RENDER);
       if (error){
