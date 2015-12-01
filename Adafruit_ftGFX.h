@@ -8,7 +8,9 @@
  #include "WProgram.h"
 #endif
 
+#ifndef _fonts_h
 #include "fonts.h"
+#endif
 
 #define swap(a, b) { int16_t t = a; a = b; b = t; }
 

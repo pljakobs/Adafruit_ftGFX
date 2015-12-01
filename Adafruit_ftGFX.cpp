@@ -31,15 +31,15 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 POSSIBILITY OF SUCH DAMAGE.
 */
 
-#include "Adafruit_mfGFX.h"
-#include "fonts.h"
-#include "font.h"
 
 #ifdef __AVR__
  #include <avr/pgmspace.h>
 #else
   #define pgm_read_byte(addr) (*(const unsigned char *)(addr))
 #endif
+
+#include "Adafruit_ftGFX.h"
+#include <stdint.h>
 
 Adafruit_GFX::Adafruit_GFX(int16_t w, int16_t h):
   WIDTH(w), HEIGHT(h)
@@ -52,7 +52,7 @@ Adafruit_GFX::Adafruit_GFX(int16_t w, int16_t h):
   textcolor = textbgcolor = 0xFFFF;
   wrap      = true;
   // Default to GLCDFONT to be compatible with existing code
-  setFont(GLCDFONT);		// May also be set to TIMESNR_8, CENTURY_8, COMICS_8 or TEST (for testing candidate fonts)
+  setFont(LIBMONOBOLD_12);		// May also be set to TIMESNR_8, CENTURY_8, COMICS_8 or TEST (for testing candidate fonts)
   }
 
 void Adafruit_GFX::setFont(uint8_t f) {
@@ -450,20 +450,21 @@ uint8_t Adafruit_GFX::getCharHeight(){
 size_t Adafruit_GFX::write(uint8_t c) {
   
   if (c == '\n') {
-    cursor_y += textsize*pgm_read_byte(&fontDesc[0].yAdvance);	//all chars are same height so use height of space char
+    cursor_y += textsize*pgm_read_byte(&fontDesc[c-0x20].yAdvance);	//all chars are same height so use height of space char
     cursor_x  = 0;
   } else if (c == '\r') {
     // skip em
   } else {
 	
-	
-	
     drawFastChar(cursor_x, cursor_y, c, textcolor, textbgcolor, textsize); 				// draw character "c"
-	uint16_t w = pgm_read_byte(&fontDesc[c-fontStart].width);							// get character width
-	uint16_t h = pgm_read_byte(&fontDesc[c-fontStart].height)							// get character height
-    if (fontKern > 0 && textcolor != textbgcolor) {										// if necessary, get kerning value
-      fillRect(cursor_x+w*textsize,cursor_y,fontKern*textsize,h*textsize,textbgcolor);	// fill kenrning space
-    }
+	//ft_heigth=&fontDesc[c].yMax-&fontDesc[c].yMin; 				// FontHeight
+	//ft_width=&fontDesc[c].xMax-&fontDesc[c]-xMin;				// FontWidth
+
+	uint16_t w = pgm_read_byte(&fontDesc[c-0x20].xAdvance);							// get character width
+	uint16_t h = pgm_read_byte(&fontDesc[c-0x20].yAdvance);							// get character height
+    //if (fontKern > 0 && textcolor != textbgcolor) {										// if necessary, get kerning value
+    //  fillRect(cursor_x+w*textsize,cursor_y,fontKern*textsize,h*textsize,textbgcolor);	// fill kenrning space
+    //}
     cursor_x += textsize*(w+fontKern);													// advance over kerning 
     if (wrap && (cursor_x > (_width - textsize*w))) {									// line wrap
       cursor_y += textsize*h;
@@ -479,24 +480,7 @@ void Adafruit_GFX::drawFastChar(int16_t x, int16_t y, unsigned char c,
   drawChar(x,y,c,color,bg,size);
 }
 
-// Draw a character
-void Adafruit_GFX::drawChar(int16_t x, int16_t y, unsigned char c,
-			    uint16_t color, uint16_t bg, uint8_t size) {
-
-	if (c < 0x20 || &fontDesc[c].unicode==0x0000)										// skip if below 0x40 or non unicode encoded
-  //if (c < fontStart || c > fontEnd) {													// skip if non encoded
-    c = 0;
-  }
- 
-  //if((x >= _width)            || // Clip right										// leave out clipping for now
-  //   (y >= _height)           || // Clip bottom
-//     ((x + (fontDesc[c].width * size) - 1) < 0) || // Clip left
-//     ((y + (fontDesc[c].height * size) - 1) < 0))   // Clip top
-  //   ((x + pgm_read_byte(&fontDesc[c].width) * size) - 1) < 0 || // Clip left
-  //   ((y + pgm_read_byte(&fontDesc[c].height) * size) - 1) < 0)   // Clip top
-  //  return;
-
-  /*
+ /*
    * Anatomy of an ft-char
    *
    * the construction and metrics are mainly directly taken from the FreeType definitions of a glyph
@@ -563,12 +547,81 @@ void Adafruit_GFX::drawChar(int16_t x, int16_t y, unsigned char c,
    *		} FontDescriptor;
    *
    */
-  
-  
-	uint8_t bitCount=0;
-  	uint16_t fontIndex = pgm_read_word(&fontDesc[c].offset) + 2; //fontDesc[c].offset + 2; //((fontDesc + c)->offset) + 2;
+ 
+ 
+// Draw a character
+void Adafruit_GFX::drawChar(int16_t x, int16_t y, unsigned char c,
+			    uint16_t color, uint16_t bg, uint8_t size) {
+
+	if (c < 0x20 || pgm_read_word(&fontDesc[c-0x20].unicode)==0x0000){										// skip if below 0x40 or non unicode encoded
+  //if (c < fontStart || c > fontEnd) {													// skip if non encoded
+    c = 0;
+	Serial.printf("skipping 0x%02x with unicode u-%04x\n", c, c);
+	return;
+  }
+  /*
+	if((x >= _width)            || // Clip right										// leave out clipping for now
+		(y >= _height)           || // Clip bottom
+		((x + (fontDesc[c].width * size) - 1) < 0) || // Clip left
+		((y + (fontDesc[c].height * size) - 1) < 0))   // Clip top
+		((x + pgm_read_byte(&fontDesc[c].width) * size) - 1) < 0 || // Clip left
+		((y + pgm_read_byte(&fontDesc[c].height) * size) - 1) < 0)   // Clip top
+	return; 
+  */
+	//uint8_t bitCount=0;
+  	//uint16_t fontIndex = pgm_read_word(&fontDesc[c].offset) ; //fontDesc[c].offset
 	
-  for (int8_t i=0; i< pgm_read_byte(&fontDesc[c].height); i++ ) {	// i<fontHeight
+	//uint8_t ft_heigth, ft_width, byte_count, ft_xMin, ft_xMax, ft_yMin, yMax,xAdvance,yAdvance;
+	//uint16_t ft_offset;
+	
+	uint8_t	 ft_byte_count, ft_height, ft_width;
+	uint16_t ft_offset;
+	
+	FontDescriptor ft_fd;
+
+	Serial.printf("Adafruit_ftGFX::drawChar(0x%02x)=%c\n",c,c);
+	
+	ft_fd.xMin = pgm_read_byte(&fontDesc[c-0x20].xMin);
+	ft_fd.xMax = pgm_read_byte(&fontDesc[c-0x20].xMax);
+	ft_fd.yMin = pgm_read_byte(&fontDesc[c-0x20].yMin);
+	ft_fd.yMax = pgm_read_byte(&fontDesc[c-0x20].yMax);
+	
+	ft_fd.xAdvance = pgm_read_byte(&fontDesc[c-0x20].xAdvance);
+	ft_fd.xAdvance = pgm_read_byte(&fontDesc[c-0x20].yAdvance);
+	ft_fd.offset   = pgm_read_word(&fontDesc[c-0x20].offset);
+	ft_fd.unicode  = pgm_read_word(&fontDesc[c-0x20].unicode);
+	
+	Serial.printf("ft_fd{\n");
+	Serial.printf("	xMin 0x%02x\n", ft_fd.xMin);
+	Serial.printf("	xMin 0x%02x\n", ft_fd.xMax);
+	Serial.printf("	xMin 0x%02x\n", ft_fd.yMin);
+	Serial.printf("	xMin 0x%02x\n", ft_fd.yMax);
+
+	Serial.printf("	xAdvance  0x%02x\n", ft_fd.xAdvance);
+	Serial.printf("	yAdvance  0x%02x\n", ft_fd.yAdvance);
+	Serial.printf("	offet     0x%04x\n", ft_fd.offset);
+	Serial.printf("	unicode   u-%04x\n", ft_fd.unicode);
+	Serial.printf("}\n");
+	
+	ft_height  = ft_fd.yMax-ft_fd.yMin; 				// FontHeight
+	ft_width   = ft_fd.xMax-ft_fd.xMin;				// FontWidth
+	ft_offset  = ft_fd.offset;
+	
+	for(uint8_t i=0; i<ft_height;i++){
+		(ft_width && 0x07)?ft_byte_count=(ft_width >> 3)+1:ft_byte_count=ft_width >> 3;
+		for(uint8_t j=0; j<ft_byte_count;j++){
+			uint8_t bitline=pgm_read_byte(fontData[c]+ft_offset++);
+			Serial.printf("bitline: 0x%02x, ",bitline);
+			for(uint8_t k=7;k>0;k--){
+				//(bitline && 1<<k)?drawPixel(x+ft_fd.xMin+(j+1)*8-k,y-ft_fd.yMax+i,color):drawPixel(x+ft_fd.xMin+(j+1)*8-k,y-ft_fd.yMax+i,bg);
+				(bitline & 1<<k)?Serial.printf("*"):Serial.printf(" ");
+			}
+		}
+		Serial.printf("\n");
+	}
+
+	/*			
+  for (int8_t i=0; i< pgm_read_byte(&fontDesc[c].); i++ ) {	// i<fontHeight
     unsigned char line;
     for (int8_t j = 0; j< pgm_read_byte(&fontDesc[c].width); j++) {			//j<fontWidth
       if (bitCount++%8 == 0) {
@@ -592,6 +645,7 @@ void Adafruit_GFX::drawChar(int16_t x, int16_t y, unsigned char c,
     }
     bitCount = 0;
   }
+  */
 }
 
 void Adafruit_GFX::setCursor(int16_t x, int16_t y) {
