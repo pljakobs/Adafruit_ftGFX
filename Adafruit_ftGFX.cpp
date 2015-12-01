@@ -110,8 +110,8 @@ void Adafruit_GFX::setFont(uint8_t f) {
 	  */
 	default:
       font = CALAREG_16;
-      fontData = Caladea_Regular_24ptBitmaps;
-	  fontDesc = Caladea_Regular_24ptDescriptors2;
+      fontData = Caladea_Regular_36ptBitmaps;
+	  fontDesc = Caladea_Regular_36ptDescriptors2;
       fontKern = 1;
       break;
   }

@@ -1,19 +1,22 @@
-Adafruit_mfGFX_Library
+Adafruit_ftGFX_Library
 ======================
 
-Multifont version of Adafruit_GFX library created by Paul Kourany, 2014
+Enhanced multifont version of the Adafruit_GFX library, created by Peter Jakobs, based on Paul Kourany's 
+work on the Adafruit_mfGFX_Library.
 
-This library supports any compatible Adafruit_GFX display driver.  The free TheDotFactory Windows program
-is recommended for created data compatible with the Adafruit_mfGFX library.
+This library supports any compatible Adafruit_GFX display driver.  
+With this programme, a simple Linux / Cygwin compilable programme called "makefont" is provided. 
+Using this, ftGFX compatible fonts can be created on any system that supports FreeType.
 
-Please see the README.pdf files for instructions on creating and adding new fonts.  The base library
-comes with 4 fonts and a "test" font so new candidate font data can easily be added and tested before
-being permanently added to the library.
+Please note that, despite there are free and open font licenses, you may not necessarily be allowed to 
+embed / include / distribute all fonts, even in the ftGFX format. Always consider the license under which
+a font is provided and, if in doubt, ask the developer / publisher.
 
 BE AWARE that though font data does not take up RAM, they do however take up PROGMEM space so having
 too many fonts may prove problematic.
 
 By default, GLCDFONT from original GFX library is the default font so code based on older font will work.
+
 This is the core graphics library for all our displays, providing a common set of graphics
 primitives (points, lines, circles, etc.).  It needs to be paired with a hardware-specific
 library for each display device we carry (to handle the lower-level functions).

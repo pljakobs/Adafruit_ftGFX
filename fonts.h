@@ -42,6 +42,7 @@ extern const FontDescriptor Liberation_Mono_Bold_16ptDescriptors2[];
 #include "./Fonts/Caladea_Regular_8pt.h"
 #include "./Fonts/Caladea_Regular_16pt.h"
 #include "./Fonts/Caladea_Regular_24pt.h"
+#include "./Fonts/Caladea_Regular_36pt.h"
 
 #define CALAREG_8 2
 extern const unsigned char Caladea_Regular_8ptBitmaps[];
@@ -54,5 +55,9 @@ extern const FontDescriptor Caladea_Regular_16ptDescriptors2[];
 #define CALAREG_24 4
 extern const unsigned char Caladea_Regular_24ptBitmaps[];
 extern const FontDescriptor Caladea_Regular_24ptDescriptors2[];
+
+#define CALAREG_36 5
+extern const unsigned char Caladea_Regular_36ptBitmaps[];
+extern const FontDescriptor Caladea_Regular_36ptDescriptors2[];
 
 #endif
