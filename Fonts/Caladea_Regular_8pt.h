@@ -7,7 +7,7 @@ const unsigned char Caladea_Regular_8ptBitmaps[] PROGMEM = {
 , 0x40
 , 0x40
 , 0x20
-, 0xc0
+, 0xe0
 , // 0x21, U-0021, !
  // Offset: 0x0006 width: 03 (04-01) height: 02 (06-04) xAdvance: 04 yAdvance: 00 
 0xd0
@@ -199,7 +199,7 @@ const unsigned char Caladea_Regular_8ptBitmaps[] PROGMEM = {
 , 0x00
 , 0x40
 , 0x40
-, 0x00
+, 0x20
 , // 0x3b, U-003b, ;
  // Offset: 0x0092 width: 04 (05-01) height: 05 (05-00) xAdvance: 04 yAdvance: 00 
 0x00
@@ -791,7 +791,7 @@ const unsigned char Caladea_Regular_8ptBitmaps[] PROGMEM = {
 0xd0
 , 0xd0
 , 0xd0
-, 0xc0
+, 0xd0
 , // 0xaa, U-00aa, ª
  // Offset: 0x024a width: 04 (04-00) height: 04 (04-00) xAdvance: 04 yAdvance: 00 
 0x48
@@ -802,7 +802,7 @@ const unsigned char Caladea_Regular_8ptBitmaps[] PROGMEM = {
  // Offset: 0x024e width: 04 (04-00) height: 03 (04-01) xAdvance: 04 yAdvance: 00 
 0xf0
 , 0x10
-, 0x00
+, 0x08
 , // 0xac, U-00ac, ¬
  // Offset: 0x0251 width: 03 (03-00) height: 01 (03-02) xAdvance: 03 yAdvance: 00 
 0xc0
@@ -839,11 +839,11 @@ const unsigned char Caladea_Regular_8ptBitmaps[] PROGMEM = {
 0x60
 , 0x60
 , 0x20
-, 0x60
+, 0x70
 , // 0xb3, U-00b3, ³
  // Offset: 0x0268 width: 02 (02-00) height: 02 (06-04) xAdvance: 02 yAdvance: 00 
 0x40
-, 0x00
+, 0x20
 , // 0xb4, U-00b4, ´
  // Offset: 0x026a width: 05 (05-00) height: 06 (04--2) xAdvance: 05 yAdvance: 00 
 0x50
@@ -867,13 +867,13 @@ const unsigned char Caladea_Regular_8ptBitmaps[] PROGMEM = {
 , // 0xb7, U-00b7, ·
  // Offset: 0x0278 width: 02 (02-00) height: 02 (00--2) xAdvance: 02 yAdvance: 00 
 0x60
-, 0xc0
+, 0xe0
 , // 0xb8, U-00b8, ¸
  // Offset: 0x027a width: 03 (03-00) height: 04 (07-03) xAdvance: 03 yAdvance: 00 
 0x40
 , 0x40
 , 0x40
-, 0x40
+, 0x50
 , // 0xb9, U-00b9, ¹
  // Offset: 0x027e width: 03 (03-00) height: 04 (06-02) xAdvance: 03 yAdvance: 00 
 0xf0

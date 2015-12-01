@@ -200,7 +200,7 @@ const unsigned char Caladea_Regular_24ptBitmaps[] PROGMEM = {
  // Offset: 0x0111 width: 03 (04-01) height: 03 (03-00) xAdvance: 04 yAdvance: 00 
 0xd0
 , 0xd0
-, 0xd0
+, 0xc0
 , // 0x2e, U-002e, .
  // Offset: 0x0114 width: 10 (11-01) height: 22 (18--4) xAdvance: 12 yAdvance: 00 
 0x00, 0x00
@@ -1845,7 +1845,7 @@ const unsigned char Caladea_Regular_24ptBitmaps[] PROGMEM = {
 , // 0xac, U-00ac, ¬
  // Offset: 0x0c01 width: 06 (07-01) height: 02 (07-05) xAdvance: 08 yAdvance: 00 
 0xfc
-, 0x00
+, 0x02
 , // 0xad, U-00ad, ­
  // Offset: 0x0c03 width: 14 (17-03) height: 15 (15-00) xAdvance: 20 yAdvance: 00 
 0x0f, 0x80
