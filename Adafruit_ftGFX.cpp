@@ -52,7 +52,7 @@ Adafruit_GFX::Adafruit_GFX(int16_t w, int16_t h):
   textcolor = textbgcolor = 0xFFFF;
   wrap      = true;
   // Default to GLCDFONT to be compatible with existing code
-  setFont(LIBMONOBOLD_12);		// May also be set to TIMESNR_8, CENTURY_8, COMICS_8 or TEST (for testing candidate fonts)
+  setFont(CALAREG_16);		// May also be set to TIMESNR_8, CENTURY_8, COMICS_8 or TEST (for testing candidate fonts)
   }
 
 void Adafruit_GFX::setFont(uint8_t f) {
@@ -109,9 +109,9 @@ void Adafruit_GFX::setFont(uint8_t f) {
       break;
 	  */
 	default:
-      font = LIBMONOBOLD_12;
-      fontData = Liberation_Mono_Bold_12ptBitmaps;
-	  fontDesc = Liberation_Mono_Bold_12ptDescriptors2;
+      font = CALAREG_16;
+      fontData = Caladea_Regular_24ptBitmaps;
+	  fontDesc = Caladea_Regular_24ptDescriptors2;
       fontKern = 1;
       break;
   }
@@ -579,7 +579,7 @@ void Adafruit_GFX::drawChar(int16_t x, int16_t y, unsigned char c,
 	
 	FontDescriptor ft_fd;
 
-	Serial.printf("Adafruit_ftGFX::drawChar(0x%02x)=%c\n",c,c);
+	Serial.printf("==================================\nAdafruit_ftGFX::drawChar(0x%02x)=%c\n",c,c);
 	
 	ft_fd.xMin = pgm_read_byte(&fontDesc[c-0x20].xMin);
 	ft_fd.xMax = pgm_read_byte(&fontDesc[c-0x20].xMax);
@@ -592,13 +592,13 @@ void Adafruit_GFX::drawChar(int16_t x, int16_t y, unsigned char c,
 	ft_fd.unicode  = pgm_read_word(&fontDesc[c-0x20].unicode);
 	
 	Serial.printf("ft_fd{\n");
-	Serial.printf("	xMin 0x%02x\n", ft_fd.xMin);
-	Serial.printf("	xMin 0x%02x\n", ft_fd.xMax);
-	Serial.printf("	xMin 0x%02x\n", ft_fd.yMin);
-	Serial.printf("	xMin 0x%02x\n", ft_fd.yMax);
+	Serial.printf("	xMin %d\n", ft_fd.xMin);
+	Serial.printf("	xMax %d\n", ft_fd.xMax);
+	Serial.printf("	yMin %d\n", ft_fd.yMin);
+	Serial.printf("	yMax %d\n", ft_fd.yMax);
 
-	Serial.printf("	xAdvance  0x%02x\n", ft_fd.xAdvance);
-	Serial.printf("	yAdvance  0x%02x\n", ft_fd.yAdvance);
+	Serial.printf("	xAdvance  %d\n", ft_fd.xAdvance);
+	Serial.printf("	yAdvance  %d\n", ft_fd.yAdvance);
 	Serial.printf("	offet     0x%04x\n", ft_fd.offset);
 	Serial.printf("	unicode   u-%04x\n", ft_fd.unicode);
 	Serial.printf("}\n");
@@ -608,13 +608,14 @@ void Adafruit_GFX::drawChar(int16_t x, int16_t y, unsigned char c,
 	ft_offset  = ft_fd.offset;
 	
 	for(uint8_t i=0; i<ft_height;i++){
-		(ft_width && 0x07)?ft_byte_count=(ft_width >> 3)+1:ft_byte_count=ft_width >> 3;
+		(ft_width%8)?ft_byte_count=(ft_width >> 3)+1:ft_byte_count=ft_width >> 3;
+		//Serial.printf("	byte_count: 0x%02x\n", ft_byte_count);
 		for(uint8_t j=0; j<ft_byte_count;j++){
-			uint8_t bitline=pgm_read_byte(fontData[c]+ft_offset++);
-			Serial.printf("bitline: 0x%02x, ",bitline);
+			uint8_t bitline=pgm_read_byte(fontData+ft_offset++);
+			//Serial.printf("bitline: 0x%02x, ",bitline);
 			for(uint8_t k=7;k>0;k--){
-				//(bitline && 1<<k)?drawPixel(x+ft_fd.xMin+(j+1)*8-k,y-ft_fd.yMax+i,color):drawPixel(x+ft_fd.xMin+(j+1)*8-k,y-ft_fd.yMax+i,bg);
-				(bitline & 1<<k)?Serial.printf("*"):Serial.printf(" ");
+				(bitline & 1<<k)?drawPixel(x+ft_fd.xMin+(j+1)*8-k,y-ft_fd.yMax+i,color):drawPixel(x+ft_fd.xMin+(j+1)*8-k,y-ft_fd.yMax+i,bg);
+				(bitline & 1<<k)?Serial.printf("@"):Serial.printf(".");
 			}
 		}
 		Serial.printf("\n");
