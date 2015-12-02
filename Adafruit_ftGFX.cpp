@@ -110,8 +110,8 @@ void Adafruit_GFX::setFont(uint8_t f) {
 	  */
 	default:
       font = CALAREG_16;
-      fontData = Caladea_Regular_24ptBitmaps;
-	  fontDesc = Caladea_Regular_24ptDescriptors2;
+      fontData = Caladea_Regular_36ptBitmaps;
+	  fontDesc = Caladea_Regular_36ptDescriptors2;
       fontKern = 1;
       break;
   }
@@ -587,7 +587,7 @@ void Adafruit_GFX::drawChar(int16_t x, int16_t y, unsigned char c,
 	ft_fd.yMax = pgm_read_byte(&fontDesc[c-0x20].yMax);
 	
 	ft_fd.xAdvance = pgm_read_byte(&fontDesc[c-0x20].xAdvance);
-	ft_fd.xAdvance = pgm_read_byte(&fontDesc[c-0x20].yAdvance);
+	ft_fd.yAdvance = pgm_read_byte(&fontDesc[c-0x20].yAdvance);
 	ft_fd.offset   = pgm_read_word(&fontDesc[c-0x20].offset);
 	ft_fd.unicode  = pgm_read_word(&fontDesc[c-0x20].unicode);
 	
@@ -614,7 +614,7 @@ void Adafruit_GFX::drawChar(int16_t x, int16_t y, unsigned char c,
 			uint8_t bitline=pgm_read_byte(fontData+ft_offset++);
 			//Serial.printf("bitline: 0x%02x, ",bitline);
 			for(uint8_t k=7;k>=0 && k<8;k--){
-				//(bitline & 1<<k)?drawPixel(x+ft_fd.xMin+(j+1)*8-k,y-ft_fd.yMax+i,color):drawPixel(x+ft_fd.xMin+(j+1)*8-k,y-ft_fd.yMax+i,bg);
+				(bitline & 1<<k)?drawPixel(x+ft_fd.xMin+(j+1)*8-k,y-ft_fd.yMax+i,color):drawPixel(x+ft_fd.xMin+(j+1)*8-k,y-ft_fd.yMax+i,bg);
 				(bitline & (1<<k))?Serial.printf("@"):Serial.printf(".");
 			}
 		}

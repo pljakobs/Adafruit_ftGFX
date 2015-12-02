@@ -164,7 +164,7 @@ int main( int argc, char** argv )
       fontdescriptor[c].yMax     = bbox.yMax;
       fontdescriptor[c].offset   = offset;
       fontdescriptor[c].xAdvance = slot->advance.x/64;
-      fontdescriptor[c].yAdvance = slot->advance.y/65;
+      fontdescriptor[c].yAdvance = slot->advance.y/64;
       fontdescriptor[c].unicode  = FF_encoding[c];
 
       int doc_yMax  = bbox.yMax;
@@ -183,7 +183,7 @@ int main( int argc, char** argv )
 
       fprintf(textfile,"* fontdescriptor[0x%02x].offset   = 0x%04x;\n", c, fontdescriptor[c].offset); 
       fprintf(textfile,"* fontdescriptor[0x%02x].xAdvance = %d;\n", c, fontdescriptor[c].xAdvance); 
-      fprintf(textfile,"* fontdescriptor[0x%02x].yadvance = %d;\n", c, fontdescriptor[c].yAdvance); 
+      fprintf(textfile,"* fontdescriptor[0x%02x].yAdvance = %d;\n", c, fontdescriptor[c].yAdvance); 
       fprintf(textfile,"* fontdescriptor[0x%02x].unicode  = U-%04x;\n", c, fontdescriptor[c].unicode); 
 
       fprintf(textfile,"************************************************\n*\n");

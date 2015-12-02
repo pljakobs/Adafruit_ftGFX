@@ -55,20 +55,21 @@ void setup(void) {
   setBacklight(255);
   //analogWrite(backlight,1024);
   Serial.println("init");
-
+  
   tft.fillScreen(ST7735_BLACK);
   tft.setRotation(3);
 
   tft.setTextColor(ST7735_RED, ST7735_BLACK);
-  tft.setCursor(0,0);
+  tft.setCursor(0,36);
   tft.printf("test");
   //delay(10000);
-  tft.setCursor(0,0);
+  tft.setCursor(0,27);
   String in,out;
-  in="äöüÄÖÜß";
+  in="Tögel Jämmer";
   UTF8toLatin1(in, out);
   Serial.print("converted String:"+out);
   tft.print(out);
+  
 }
 
 void loop()
