@@ -48,6 +48,7 @@ int main( int argc, char** argv )
   int           n, num_chars;
   int           i,j,p,q,offset;
   int           size;
+  int           dpi=114;
 
   if ( argc != 3 )
   {
@@ -130,12 +131,12 @@ int main( int argc, char** argv )
   int cm = face->num_charmaps;
   fprintf(textfile,"found %d charmaps\n", cm);
   
-  FT_Set_Char_Size(face, size*64,0,72,0);
+  FT_Set_Char_Size(face, size*64,0,dpi,0);
   fprintf(file,"const unsigned char %s_%s_%dptBitmaps[] PROGMEM = {\n", face->family_name, face->style_name, size);
  
   offset=0;
   uint8_t ft_minchar=0x20;
-  uint8_t ft_threshhold=64;
+  uint8_t ft_threshhold=192;
   for(c=ft_minchar;c<=255;c++){
     if(FF_encoding[c]){
       error=FT_Load_Char(face, FF_encoding[c], FT_LOAD_RENDER);
@@ -164,7 +165,10 @@ int main( int argc, char** argv )
       fontdescriptor[c].yMax     = bbox.yMax;
       fontdescriptor[c].offset   = offset;
       fontdescriptor[c].xAdvance = slot->advance.x/64;
-      fontdescriptor[c].yAdvance = slot->advance.y/64;
+      fontdescriptor[c].yAdvance = size;
+      //fontdescriptor[c].yAdvance = slot->advance.y/64;
+      //fontdescriptor[c].xAdvance = face->glyph->linearHoriAdvance/64;
+      //fontdescriptor[c].yAdvance = face->glyph->linearVertAdvance/64;
       fontdescriptor[c].unicode  = FF_encoding[c];
 
       int doc_yMax  = bbox.yMax;
@@ -183,7 +187,7 @@ int main( int argc, char** argv )
 
       fprintf(textfile,"* fontdescriptor[0x%02x].offset   = 0x%04x;\n", c, fontdescriptor[c].offset); 
       fprintf(textfile,"* fontdescriptor[0x%02x].xAdvance = %d;\n", c, fontdescriptor[c].xAdvance); 
-      fprintf(textfile,"* fontdescriptor[0x%02x].yAdvance = %d;\n", c, fontdescriptor[c].yAdvance); 
+      fprintf(textfile,"* fontdescriptor[0x%02x].yadvance = %d;\n", c, fontdescriptor[c].yAdvance); 
       fprintf(textfile,"* fontdescriptor[0x%02x].unicode  = U-%04x;\n", c, fontdescriptor[c].unicode); 
 
       fprintf(textfile,"************************************************\n*\n");
