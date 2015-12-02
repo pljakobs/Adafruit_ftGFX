@@ -608,14 +608,14 @@ void Adafruit_GFX::drawChar(int16_t x, int16_t y, unsigned char c,
 	ft_offset  = ft_fd.offset;
 	
 	for(uint8_t i=0; i<ft_height;i++){
-		(ft_width%8)?ft_byte_count=(ft_width >> 3)+1:ft_byte_count=ft_width >> 3;
+		(ft_width%8)?ft_byte_count=(ft_width >> 3)+1:ft_byte_count=ft_width >> 3; //ToDo: this breaks with characters that are exactly 8 bits wide but, for some reason, are padded to two bytes. Either a bug in makefont or here. I'd rather fix it in makefont.
 		//Serial.printf("	byte_count: 0x%02x\n", ft_byte_count);
 		for(uint8_t j=0; j<ft_byte_count;j++){
 			uint8_t bitline=pgm_read_byte(fontData+ft_offset++);
 			//Serial.printf("bitline: 0x%02x, ",bitline);
-			for(uint8_t k=7;k>0;k--){
-				(bitline & 1<<k)?drawPixel(x+ft_fd.xMin+(j+1)*8-k,y-ft_fd.yMax+i,color):drawPixel(x+ft_fd.xMin+(j+1)*8-k,y-ft_fd.yMax+i,bg);
-				(bitline & 1<<k)?Serial.printf("@"):Serial.printf(".");
+			for(uint8_t k=7;k>=0 && k<8;k--){
+				//(bitline & 1<<k)?drawPixel(x+ft_fd.xMin+(j+1)*8-k,y-ft_fd.yMax+i,color):drawPixel(x+ft_fd.xMin+(j+1)*8-k,y-ft_fd.yMax+i,bg);
+				(bitline & (1<<k))?Serial.printf("@"):Serial.printf(".");
 			}
 		}
 		Serial.printf("\n");
