@@ -110,8 +110,8 @@ void Adafruit_GFX::setFont(uint8_t f) {
 	  */
 	default:
       font = CALAREG_16;
-      fontData = Caladea_Regular_36ptBitmaps;
-	  fontDesc = Caladea_Regular_36ptDescriptors2;
+      fontData = Caladea_Regular_10ptBitmaps;
+	  fontDesc = Caladea_Regular_10ptDescriptors2;
       fontKern = 1;
       break;
   }
@@ -556,7 +556,7 @@ void Adafruit_GFX::drawChar(int16_t x, int16_t y, unsigned char c,
 	if (c < 0x20 || pgm_read_word(&fontDesc[c-0x20].unicode)==0x0000){										// skip if below 0x40 or non unicode encoded
   //if (c < fontStart || c > fontEnd) {													// skip if non encoded
     c = 0;
-	Serial.printf("skipping 0x%02x with unicode u-%04x\n", c, c);
+	// Serial.printf("skipping 0x%02x with unicode u-%04x\n", c, c);
 	return;
   }
   /*
@@ -579,7 +579,7 @@ void Adafruit_GFX::drawChar(int16_t x, int16_t y, unsigned char c,
 	
 	FontDescriptor ft_fd;
 
-	Serial.printf("==================================\nAdafruit_ftGFX::drawChar(0x%02x)=%c\n",c,c);
+	//Serial.printf("==================================\nAdafruit_ftGFX::drawChar(0x%02x)=%c\n",c,c);
 	
 	ft_fd.xMin = pgm_read_byte(&fontDesc[c-0x20].xMin);
 	ft_fd.xMax = pgm_read_byte(&fontDesc[c-0x20].xMax);
@@ -590,6 +590,8 @@ void Adafruit_GFX::drawChar(int16_t x, int16_t y, unsigned char c,
 	ft_fd.yAdvance = pgm_read_byte(&fontDesc[c-0x20].yAdvance);
 	ft_fd.offset   = pgm_read_word(&fontDesc[c-0x20].offset);
 	ft_fd.unicode  = pgm_read_word(&fontDesc[c-0x20].unicode);
+	
+	/*
 	
 	Serial.printf("ft_fd{\n");
 	Serial.printf("	xMin %d\n", ft_fd.xMin);
@@ -603,6 +605,8 @@ void Adafruit_GFX::drawChar(int16_t x, int16_t y, unsigned char c,
 	Serial.printf("	unicode   u-%04x\n", ft_fd.unicode);
 	Serial.printf("}\n");
 	
+	*/
+	
 	ft_height  = ft_fd.yMax-ft_fd.yMin; 				// FontHeight
 	ft_width   = ft_fd.xMax-ft_fd.xMin;				// FontWidth
 	ft_offset  = ft_fd.offset;
@@ -615,10 +619,10 @@ void Adafruit_GFX::drawChar(int16_t x, int16_t y, unsigned char c,
 			//Serial.printf("bitline: 0x%02x, ",bitline);
 			for(uint8_t k=7;k>=0 && k<8;k--){
 				(bitline & 1<<k)?drawPixel(x+ft_fd.xMin+(j+1)*8-k,y-ft_fd.yMax+i,color):drawPixel(x+ft_fd.xMin+(j+1)*8-k,y-ft_fd.yMax+i,bg);
-				(bitline & (1<<k))?Serial.printf("@"):Serial.printf(".");
+				//(bitline & (1<<k))?Serial.printf("@"):Serial.printf(".");
 			}
 		}
-		Serial.printf("\n");
+		//Serial.printf("\n");
 	}
 
 	/*			

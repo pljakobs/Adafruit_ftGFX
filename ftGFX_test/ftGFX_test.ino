@@ -65,7 +65,7 @@ void setup(void) {
   //delay(10000);
   tft.setCursor(0,27);
   String in,out;
-  in="Tögel Jämmer";
+  in="Tögel Jämmer\nMümmel Straßen\ncîté dorée";
   UTF8toLatin1(in, out);
   Serial.print("converted String:"+out);
   tft.print(out);
