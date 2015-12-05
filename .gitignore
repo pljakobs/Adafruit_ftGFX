@@ -8,9 +8,14 @@ Desktop.ini
 # Recycle Bin used on file shares
 $RECYCLE.BIN/
 
+<<<<<<< HEAD
+# I cannot share the whole fonts folder since I don't have the rights.
+Fonts/other/
+=======
 # don't distribute all fonts
 Fonts/other/
 
+>>>>>>> master
 # Windows Installer files
 *.cab
 *.msi
@@ -44,3 +49,6 @@ Fonts/other/
 Network Trash Folder
 Temporary Items
 .apdisk
+
+# vi swap files
+.swp
