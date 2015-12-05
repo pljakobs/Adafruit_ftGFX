@@ -9,7 +9,7 @@ Desktop.ini
 $RECYCLE.BIN/
 
 # I cannot share the whole fonts folder since I don't have the rights.
-Fonts/
+Fonts/other/
 # Windows Installer files
 *.cab
 *.msi

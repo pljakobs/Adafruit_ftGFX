@@ -74,4 +74,14 @@ extern const FontDescriptor Open_Sans_Regular_24ptDescriptors2[];
 extern const unsigned char Open_Sans_Bold_24ptBitmaps[];
 extern const FontDescriptor Open_Sans_Bold_24ptDescriptors2[];
 
+#include "./Fonts/Open_Sans_Regular_36pt.h"
+#define OPENSANSREG_36 5
+extern const unsigned char Open_Sans_Regular_36ptBitmaps[];
+extern const FontDescriptor Open_Sans_Regular_36ptDescriptors2[];
+
+#include "./Fonts/Open_Sans_Bold_36pt.h"
+#define OPENSANSBOLD_36 6
+extern const unsigned char Open_Sans_Bold_36ptBitmaps[];
+extern const FontDescriptor Open_Sans_Bold_36ptDescriptors2[];
+
 #endif
