@@ -889,7 +889,6 @@ void Adafruit_GFX::drawFastChar(int16_t x, int16_t y, unsigned char c,
    *
    *	Drawing:
    *	fill the cell to be inhabited by the character
-   *	draw bitmap (should be doable with "drawBitmap()" with 
    *		x=Cursor_x+xMin;
    *		y=Cursor_y-xMax;
    *		w=xMax-xMin;
@@ -930,11 +929,6 @@ void Adafruit_GFX::drawChar(int16_t x, int16_t y, unsigned char c,
 		((y + pgm_read_byte(&fontDesc[c].height) * size) - 1) < 0)   // Clip top
 	return; 
   */
-	//uint8_t bitCount=0;
-  	//uint16_t fontIndex = pgm_read_word(&fontDesc[c].offset) ; //fontDesc[c].offset
-	
-	//uint8_t ft_heigth, ft_width, byte_count, ft_xMin, ft_xMax, ft_yMin, yMax,xAdvance,yAdvance;
-	//uint16_t ft_offset;
 	
 	uint8_t	 ft_byte_count, ft_height, ft_width;
 	uint16_t ft_offset;
@@ -973,7 +967,7 @@ void Adafruit_GFX::drawChar(int16_t x, int16_t y, unsigned char c,
 	ft_offset  = ft_fd.offset;
 	
 	for(uint8_t i=0; i<ft_height;i++){
-		(ft_width%8)?ft_byte_count=(ft_width >> 3)+1:ft_byte_count=ft_width >> 3; //ToDo: this breaks with characters that are exactly 8 bits wide but, for some reason, are padded to two bytes. Either a bug in makefont or here. I'd rather fix it in makefont.
+		(ft_width%8)?ft_byte_count=(ft_width >> 3)+1:ft_byte_count=ft_width >> 3; 
 		//Serial.printf("	byte_count: 0x%02x\n", ft_byte_count);
 		for(uint8_t j=0; j<ft_byte_count;j++){
 			uint8_t bitline=pgm_read_byte(fontData+ft_offset++);
@@ -985,33 +979,6 @@ void Adafruit_GFX::drawChar(int16_t x, int16_t y, unsigned char c,
 		}
 		//Serial.printf("\n");
 	}
-
-	/*			
-  for (int8_t i=0; i< pgm_read_byte(&fontDesc[c].); i++ ) {	// i<fontHeight
-    unsigned char line;
-    for (int8_t j = 0; j< pgm_read_byte(&fontDesc[c].width); j++) {			//j<fontWidth
-      if (bitCount++%8 == 0) {
-        line = pgm_read_byte(fontData+fontIndex++);
-	  }
-      if (line & 0x80) {
-        if (size == 1) {// default sizeFast
-          drawPixel(x+j, y+i, color);
-          }
-        else {  // big size
-          fillRect(x+(j*size), y+(i*size), size, size, color);
-        } 
-      } else if (bg != color) {
-        if (size == 1) // default size
-          drawPixel(x+j, y+i, bg);
-        else {  // big size
-          fillRect(x+j*size, y+i*size, size, size, bg);
-        }
-      }
-      line <<= 1;
-    }
-    bitCount = 0;
-  }
-  */
 }
 
 void Adafruit_GFX::setCursor(int16_t x, int16_t y) {

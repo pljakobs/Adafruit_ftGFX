@@ -15,7 +15,9 @@ a font is provided and, if in doubt, ask the developer / publisher.
 BE AWARE that though font data does not take up RAM, they do however take up PROGMEM space so having
 too many fonts may prove problematic.
 
-By default, GLCDFONT from original GFX library is the default font so code based on older font will work.
+the default font is Open_Sans_Regular_12pt, so this will definitively break your layout if you try to 
+just straight away replace the original Adafruit_GFX library. But that's already true to the fact that
+the font baseline is different, so there's no point.
 
 This is the core graphics library for all our displays, providing a common set of graphics
 primitives (points, lines, circles, etc.).  It needs to be paired with a hardware-specific
