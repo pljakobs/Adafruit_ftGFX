@@ -1,0 +1,46 @@
+/*
+ * Gadget Library
+ *
+ * these are a few ideas about a gadget library that should help create a dashboard...
+ * no code exists as of yet
+ *
+ */
+
+ /*
+  * provides: screens & gadgets
+  * 
+  * screen is a virtual canvas that gadgets can be drawn to
+  * screens directly correspond to physical display devices (using Adafruit_xxGFX Library)
+  * only one screen can be displayed per physical device at any given time  
+  *
+  * gadget is a rectangular space that can contain information and can be redrawn on a screen
+  * multiple gadgets can coexist on any given screen
+  * 
+  * gadget box
+  * the gadget box is the rectangle that is "owned" by the gadget. The gadget is confined to this
+  * drawing space and must not use any display outside it.
+  * box struct{
+  *		int		x,
+  *		int		y,
+  *		int		width,
+  *		int		height,	
+  *		int		z,			// a rudimentary stacking method, currently only "TOP" or "BOTTOM"
+  *		bool	has_border,	// draw a border 
+  *		color	bg,
+  *		color	bb,
+  *		color	fg, 		// default foreground color
+		uint8_t	alignment	// h_left|h_center|h_right + v_top|v_center|v_bottom + linewrap (0<<l<<c<<r<<t<<c<<b<<w)
+  *		bool	visible		// visibility
+  *	}
+  *
+  *
+  * gadgets can have numerical or text values. 
+  * Text value gadgets just display their value in the space of the gadget box
+  * gadgets export the following functions
+  *   -		update (updates the gadgets display value, triggers a redraw)
+  *   -		redraw (redraws the gadget on screen, if the screen it is assigned is visible and there's no 
+  *					top gadget displayed on that screen at that time)
+  *	  -		change_bg	(changes the background color)
+  *   -		change_fg	(changes the foreground color)
+  *   -		change_bd	(changes the border color)
+  *   -		
