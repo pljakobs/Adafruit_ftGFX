@@ -136,7 +136,11 @@ int main( int argc, char** argv )
  
   offset=0;
   uint8_t ft_minchar=0x20;
+<<<<<<< HEAD
   uint8_t ft_threshhold=127;
+=======
+  uint8_t ft_threshhold=192;
+>>>>>>> 69071550692bbab9f7e36d0c8d49ca87892136bf
   for(c=ft_minchar;c<=255;c++){
     if(FF_encoding[c]){
       error=FT_Load_Char(face, FF_encoding[c], FT_LOAD_RENDER);
