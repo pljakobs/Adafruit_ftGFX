@@ -8,6 +8,9 @@ Desktop.ini
 # Recycle Bin used on file shares
 $RECYCLE.BIN/
 
+# don't distribute all fonts
+Fonts/other/
+
 # Windows Installer files
 *.cab
 *.msi
