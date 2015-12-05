@@ -8,6 +8,8 @@ Desktop.ini
 # Recycle Bin used on file shares
 $RECYCLE.BIN/
 
+# I cannot share the whole fonts folder since I don't have the rights.
+Fonts/
 # Windows Installer files
 *.cab
 *.msi

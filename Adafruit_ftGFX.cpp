@@ -41,6 +41,10 @@ POSSIBILITY OF SUCH DAMAGE.
 #include "Adafruit_ftGFX.h"
 #include <stdint.h>
 
+#ifndef _fonts_h
+#include "fonts.h"
+#endif
+
 Adafruit_GFX::Adafruit_GFX(int16_t w, int16_t h):
   WIDTH(w), HEIGHT(h)
 {
@@ -52,12 +56,373 @@ Adafruit_GFX::Adafruit_GFX(int16_t w, int16_t h):
   textcolor = textbgcolor = 0xFFFF;
   wrap      = true;
   // Default to GLCDFONT to be compatible with existing code
-  setFont(CALAREG_16);		// May also be set to TIMESNR_8, CENTURY_8, COMICS_8 or TEST (for testing candidate fonts)
+  setFont(OPENSANSREG_12);		// May also be set to TIMESNR_8, CENTURY_8, COMICS_8 or TEST (for testing candidate fonts)
   }
 
 void Adafruit_GFX::setFont(uint8_t f) {
   font = f;
   switch(font) {
+
+	#ifdef OPENSANSREG_12
+	case OPENSANSREG_12:
+		fontData = Open_Sans_Regular_12ptBitmaps;
+		fontDesc = Open_Sans_Regular_12ptDescriptors2;
+		fontKern = 0;
+		break;
+	#endif
+	
+	#ifdef OPENSANSREG_14
+	case OPENSANSREG_14:
+		fontData = Open_Sans_Regular_14ptBitmaps;
+		fontDesc = Open_Sans_Regular_14ptDescriptors2;
+		fontKern = 0;
+		break;
+	#endif
+	
+	#ifdef OPENSANSBOLD_12
+	case OPENSANSBOLD_12:
+		fontData = Open_Sans_Bold_12ptBitmaps;
+		fontDesc = Open_Sans_Bold_12ptDescriptors2;
+		fontKern = 0;
+		break;
+	#endif
+	
+	#ifdef OPENSANSBOLD_14
+	case OPENSANSBOLD_14:
+		fontData = Open_Sans_Bold_14ptBitmaps;
+		fontDesc = Open_Sans_Bold_14ptDescriptors2;
+		fontKern = 0;
+		break;
+	#endif
+	
+	#ifdef OPENSANSREG_24
+	case OPENSANSREG_24:
+		fontData = Open_Sans_Regular_24ptBitmaps;
+		fontDesc = Open_Sans_Regular_24ptDescriptors2;
+		fontKern = 0;
+		break;
+	#endif
+	
+	#ifdef OPENSANSBOLD_24
+	case OPENSANSBOLD_24:
+		fontData = Open_Sans_Bold_24ptBitmaps;
+		fontDesc = Open_Sans_Bold_24ptDescriptors2;
+		fontKern = 0;
+		break;
+	#endif
+  
+#ifdef WAREEBOOK_8
+	case WAREEBOOK_8:
+		fontData = Waree_Book_8ptBitmaps;
+		fontDesc = Waree_Book_8ptDescriptors2;
+		fontKern = 0;
+		break;
+#endif
+
+#ifdef WAREEBOOK_10
+	case WAREEBOOK_10:
+		fontData = Waree_Book_10ptBitmaps;
+		fontDesc = Waree_Book_10ptDescriptors2;
+		fontKern = 0;
+		break;
+#endif
+		
+#ifdef WAREEBOOK_12
+	case WAREEBOOK_12:
+		fontData = Waree_Book_12ptBitmaps;
+		fontDesc = Waree_Book_12ptDescriptors2;
+		fontKern = 0;
+		break;
+#endif
+		
+#ifdef WAREEBOOK_14
+	case WAREEBOOK_14:
+		fontData = Waree_Book_14ptBitmaps;
+		fontDesc = Waree_Book_14ptDescriptors2;
+		fontKern = 0;
+		break;
+#endif
+		
+#ifdef WAREEBOOK_16
+	case WAREEBOOK_16:
+		fontData = Waree_Book_16ptBitmaps;
+		fontDesc = Waree_Book_16ptDescriptors2;
+		fontKern = 0;
+		break;
+#endif
+		
+#ifdef WAREEBOOK_18
+	case WAREEBOOK_18:
+		fontData = Waree_Book_18ptBitmaps;
+		fontDesc = Waree_Book_18ptDescriptors2;
+		fontKern = 0;
+		break;
+#endif
+		
+#ifdef WAREEBOOK_20
+	case WAREEBOOK_20:
+		fontData = Waree_Book_20ptBitmaps;
+		fontDesc = Waree_Book_20ptDescriptors2;
+		fontKern = 0;
+		break;
+#endif
+		
+#ifdef WAREEBOOK_22
+	case WAREEBOOK_22:
+		fontData = Waree_Book_22ptBitmaps;
+		fontDesc = Waree_Book_22ptDescriptors2;
+		fontKern = 0;
+		break;
+#endif
+		
+#ifdef WAREEBOOK_24
+	case WAREEBOOK_24:
+		fontData = Waree_Book_24ptBitmaps;
+		fontDesc = Waree_Book_24ptDescriptors2;
+		fontKern = 0;
+		break;
+#endif
+		
+#ifdef WAREEBOOK_26
+	case WAREEBOOK_26:
+		fontData = Waree_Book_26ptBitmaps;
+		fontDesc = Waree_Book_26ptDescriptors2;
+		fontKern = 0;
+		break;
+#endif
+		
+#ifdef WAREEBOOK_28
+	case WAREEBOOK_28:
+		fontData = Waree_Book_28ptBitmaps;
+		fontDesc = Waree_Book_28ptDescriptors2;
+		fontKern = 0;
+		break;
+#endif
+		
+#ifdef WAREEBOOK_32
+	case WAREEBOOK_32:
+		fontData = Waree_Book_32ptBitmaps;
+		fontDesc = Waree_Book_32ptDescriptors2;
+		fontKern = 0;
+		break;
+#endif
+		
+#ifdef WAREEBOOK_36
+	case WAREEBOOK_36:
+		fontData = Waree_Book_36ptBitmaps;
+		fontDesc = Waree_Book_36ptDescriptors2;
+		fontKern = 0;
+		break;
+#endif
+
+#ifdef WAREEBOLD_8
+	case WAREEBOLD_8:
+		fontData = Waree_Bold_8ptBitmaps;
+		fontDesc = Waree_Bold_8ptDescriptors2;
+		fontKern = 0;
+		break;
+#endif
+
+#ifdef WAREEBOLD_10
+	case WAREEBOLD_10:
+		fontData = Waree_Bold_10ptBitmaps;
+		fontDesc = Waree_Bold_10ptDescriptors2;
+		fontKern = 0;
+		break;
+#endif
+		
+#ifdef WAREEBOLD_12
+	case WAREEBOLD_12:
+		fontData = Waree_Bold_12ptBitmaps;
+		fontDesc = Waree_Bold_12ptDescriptors2;
+		fontKern = 0;
+		break;
+#endif
+		
+#ifdef WAREEBOLD_14
+	case WAREEBOLD_14:
+		fontData = Waree_Bold_14ptBitmaps;
+		fontDesc = Waree_Bold_14ptDescriptors2;
+		fontKern = 0;
+		break;
+#endif
+		
+#ifdef WAREEBOLD_16
+	case WAREEBOLD_16:
+		fontData = Waree_Bold_16ptBitmaps;
+		fontDesc = Waree_Bold_16ptDescriptors2;
+		fontKern = 0;
+		break;
+#endif
+		
+#ifdef WAREEBOLD_18
+	case WAREEBOLD_18:
+		fontData = Waree_Bold_18ptBitmaps;
+		fontDesc = Waree_Bold_18ptDescriptors2;
+		fontKern = 0;
+		break;
+#endif
+		
+#ifdef WAREEBOLD_20
+	case WAREEBOLD_20:
+		fontData = Waree_Bold_20ptBitmaps;
+		fontDesc = Waree_Bold_20ptDescriptors2;
+		fontKern = 0;
+		break;
+#endif
+		
+#ifdef WAREEBOLD_22
+	case WAREEBOLD_22:
+		fontData = Waree_Bold_22ptBitmaps;
+		fontDesc = Waree_Bold_22ptDescriptors2;
+		fontKern = 0;
+		break;
+#endif
+		
+#ifdef WAREEBOLD_24
+	case WAREEBOLD_24:
+		fontData = Waree_Bold_24ptBitmaps;
+		fontDesc = Waree_Bold_24ptDescriptors2;
+		fontKern = 0;
+		break;
+#endif
+		
+#ifdef WAREEBOLD_26
+	case WAREEBOLD_26:
+		fontData = Waree_Bold_26ptBitmaps;
+		fontDesc = Waree_Bold_26ptDescriptors2;
+		fontKern = 0;
+		break;
+#endif
+		
+#ifdef WAREEBOLD_28
+	case WAREEBOLD_28:
+		fontData = Waree_Bold_28ptBitmaps;
+		fontDesc = Waree_Bold_28ptDescriptors2;
+		fontKern = 0;
+		break;
+#endif
+		
+#ifdef WAREEBOLD_32
+	case WAREEBOLD_32:
+		fontData = Waree_Bold_32ptBitmaps;
+		fontDesc = Waree_Bold_32ptDescriptors2;
+		fontKern = 0;
+		break;
+#endif
+		
+#ifdef WAREEBOLD_36
+	case WAREEBOLD_36:
+		fontData = Waree_Bold_36ptBitmaps;
+		fontDesc = Waree_Bold_36ptDescriptors2;
+		fontKern = 0;
+		break;
+#endif
+		
+#ifdef WAREEOBLIQUE_8
+	case WAREEOBLIQUE_8:
+		fontData = Waree_Oblique_8ptBitmaps;
+		fontDesc = Waree_Oblique_8ptDescriptors2;
+		fontKern = 0;
+		break;
+#endif
+
+#ifdef WAREEOBLIQUE_10
+	case WAREEOBLIQUE_10:
+		fontData = Waree_Oblique_10ptBitmaps;
+		fontDesc = Waree_Oblique_10ptDescriptors2;
+		fontKern = 0;
+		break;
+#endif
+		
+#ifdef WAREEOBLIQUE_12
+	case WAREEOBLIQUE_12:
+		fontData = Waree_Oblique_12ptBitmaps;
+		fontDesc = Waree_Oblique_12ptDescriptors2;
+		fontKern = 0;
+		break;
+#endif
+		
+#ifdef WAREEOBLIQUE_14
+	case WAREEOBLIQUE_14:
+		fontData = Waree_Oblique_14ptBitmaps;
+		fontDesc = Waree_Oblique_14ptDescriptors2;
+		fontKern = 0;
+		break;
+#endif
+		
+#ifdef WAREEOBLIQUE_16
+	case WAREEOBLIQUE_16:
+		fontData = Waree_Oblique_16ptBitmaps;
+		fontDesc = Waree_Oblique_16ptDescriptors2;
+		fontKern = 0;
+		break;
+#endif
+		
+#ifdef WAREEOBLIQUE_18
+	case WAREEOBLIQUE_18:
+		fontData = Waree_Oblique_18ptBitmaps;
+		fontDesc = Waree_Oblique_18ptDescriptors2;
+		fontKern = 0;
+		break;
+#endif
+		
+#ifdef WAREEOBLIQUE_20
+	case WAREEOBLIQUE_20:
+		fontData = Waree_Oblique_20ptBitmaps;
+		fontDesc = Waree_Oblique_20ptDescriptors2;
+		fontKern = 0;
+		break;
+#endif
+		
+#ifdef WAREEOBLIQUE_22
+	case WAREEOBLIQUE_22:
+		fontData = Waree_Oblique_22ptBitmaps;
+		fontDesc = Waree_Oblique_22ptDescriptors2;
+		fontKern = 0;
+		break;
+#endif
+		
+#ifdef WAREEOBLIQUE_24
+	case WAREEOBLIQUE_24:
+		fontData = Waree_Oblique_24ptBitmaps;
+		fontDesc = Waree_Oblique_24ptDescriptors2;
+		fontKern = 0;
+		break;
+#endif
+		
+#ifdef WAREEOBLIQUE_26
+	case WAREEOBLIQUE_26:
+		fontData = Waree_Oblique_26ptBitmaps;
+		fontDesc = Waree_Oblique_26ptDescriptors2;
+		fontKern = 0;
+		break;
+#endif
+		
+#ifdef WAREEOBLIQUE_28
+	case WAREEOBLIQUE_28:
+		fontData = Waree_Oblique_28ptBitmaps;
+		fontDesc = Waree_Oblique_28ptDescriptors2;
+		fontKern = 0;
+		break;
+#endif
+		
+#ifdef WAREEOBLIQUE_32
+	case WAREEOBLIQUE_32:
+		fontData = Waree_Oblique_32ptBitmaps;
+		fontDesc = Waree_Oblique_32ptDescriptors2;
+		fontKern = 0;
+		break;
+#endif
+		
+#ifdef WAREEOBLIQUE_36
+	case WAREEOBLIQUE_36:
+		fontData = Waree_Oblique_36ptBitmaps;
+		fontDesc = Waree_Oblique_36ptDescriptors2;
+		fontKern = 0;
+		break;
+#endif
+
 #ifdef TIMESNEWROMAN8
     case TIMESNR_8:
       fontData = timesNewRoman_8ptBitmaps;
@@ -109,10 +474,10 @@ void Adafruit_GFX::setFont(uint8_t f) {
       break;
 	  */
 	default:
-      font = CALAREG_16;
-      fontData = Caladea_Regular_10ptBitmaps;
-	  fontDesc = Caladea_Regular_10ptDescriptors2;
-      fontKern = 1;
+      font = OPENSANSREG_12;
+      fontData = Open_Sans_Regular_12ptBitmaps;
+	  fontDesc = Open_Sans_Regular_12ptDescriptors2;
+      fontKern = 0;
       break;
   }
 
@@ -449,11 +814,10 @@ uint8_t Adafruit_GFX::getCharHeight(){
 	
 size_t Adafruit_GFX::write(uint8_t c) {
   
-  if (c == '\n') {
-    cursor_y += textsize*pgm_read_byte(&fontDesc[c-0x20].yAdvance);	//all chars are same height so use height of space char
+  if (c == 0x0a || c == 0x0c) {
+    cursor_y += 16*pgm_read_byte(&fontDesc[0x20].yAdvance)/10;	//all chars are same height so use height of space char
     cursor_x  = 0;
-  } else if (c == '\r') {
-    // skip em
+	Serial.print("cr/lf\n");
   } else {
 	
     drawFastChar(cursor_x, cursor_y, c, textcolor, textbgcolor, textsize); 				// draw character "c"
@@ -554,9 +918,7 @@ void Adafruit_GFX::drawChar(int16_t x, int16_t y, unsigned char c,
 			    uint16_t color, uint16_t bg, uint8_t size) {
 
 	if (c < 0x20 || pgm_read_word(&fontDesc[c-0x20].unicode)==0x0000){										// skip if below 0x40 or non unicode encoded
-  //if (c < fontStart || c > fontEnd) {													// skip if non encoded
     c = 0;
-	// Serial.printf("skipping 0x%02x with unicode u-%04x\n", c, c);
 	return;
   }
   /*
@@ -604,11 +966,10 @@ void Adafruit_GFX::drawChar(int16_t x, int16_t y, unsigned char c,
 	Serial.printf("	offet     0x%04x\n", ft_fd.offset);
 	Serial.printf("	unicode   u-%04x\n", ft_fd.unicode);
 	Serial.printf("}\n");
-	
 	*/
 	
 	ft_height  = ft_fd.yMax-ft_fd.yMin; 				// FontHeight
-	ft_width   = ft_fd.xMax-ft_fd.xMin;				// FontWidth
+	ft_width   = ft_fd.xMax-ft_fd.xMin;					// FontWidth
 	ft_offset  = ft_fd.offset;
 	
 	for(uint8_t i=0; i<ft_height;i++){

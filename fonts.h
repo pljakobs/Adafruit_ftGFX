@@ -39,45 +39,39 @@ extern const unsigned char Liberation_Mono_Bold_16ptBitmaps[];
 extern const FontDescriptor Liberation_Mono_Bold_16ptDescriptors2[];
 */
 
-#include "./Fonts/Caladea_Regular_8pt.h"
-#include "./Fonts/Caladea_Regular_10pt.h"
-#include "./Fonts/Caladea_Regular_12pt.h"
-#include "./Fonts/Caladea_Regular_16pt.h"
-#include "./Fonts/Caladea_Regular_24pt.h"
-#include "./Fonts/Caladea_Regular_28pt.h"
-#include "./Fonts/Caladea_Regular_36pt.h"
-#include "./Fonts/Caladea_Regular_48pt.h"
+//#include "./Fonts/Waree_Book.h"
+//#include "./Fonts/Waree_Bold.h"
+//#include "./Fonts/Waree_Oblige.h"
+//#include "./Fonts/Waree_BoldOblige.h"
 
-#define CALAREG_8 2
-extern const unsigned char Caladea_Regular_8ptBitmaps[];
-extern const FontDescriptor Caladea_Regular_8ptDescriptors2[];
+#include "./Fonts/Open_Sans_Regular_12pt.h"
+#define OPENSANSREG_12 1
+extern const unsigned char Open_Sans_Regular_12ptBitmaps[];
+extern const FontDescriptor Open_Sans_Regular_12ptDescriptors2[];
 
-#define CALAREG_10 3
-extern const unsigned char Caladea_Regular_10ptBitmaps[];
-extern const FontDescriptor Caladea_Regular_10ptDescriptors2[];
+#include "./Fonts/Open_Sans_Bold_12pt.h"
+#define OPENSANSBOLD_12 2
+extern const unsigned char Open_Sans_Bold_12ptBitmaps[];
+extern const FontDescriptor Open_Sans_Bold_12ptDescriptors2[];
 
-#define CALAREG_12 4
-extern const unsigned char Caladea_Regular_12ptBitmaps[];
-extern const FontDescriptor Caladea_Regular_12ptDescriptors2[];
+#include "./Fonts/Open_Sans_Regular_14pt.h"
+#define OPENSANSREG_14 3
+extern const unsigned char Open_Sans_Regular_14ptBitmaps[];
+extern const FontDescriptor Open_Sans_Regular_14ptDescriptors2[];
 
-#define CALAREG_16 5
-extern const unsigned char Caladea_Regular_16ptBitmaps[];
-extern const FontDescriptor Caladea_Regular_16ptDescriptors2[];
+#include "./Fonts/Open_Sans_Bold_14pt.h"
+#define OPENSANSBOLD_14 4
+extern const unsigned char Open_Sans_Bold_14ptBitmaps[];
+extern const FontDescriptor Open_Sans_Bold_14ptDescriptors2[];
 
-#define CALAREG_24 6
-extern const unsigned char Caladea_Regular_24ptBitmaps[];
-extern const FontDescriptor Caladea_Regular_24ptDescriptors2[];
+#include "./Fonts/Open_Sans_Regular_24pt.h"
+#define OPENSANSREG_24 5
+extern const unsigned char Open_Sans_Regular_24ptBitmaps[];
+extern const FontDescriptor Open_Sans_Regular_24ptDescriptors2[];
 
-#define CALAREG_28 6
-extern const unsigned char Caladea_Regular_28ptBitmaps[];
-extern const FontDescriptor Caladea_Regular_28ptDescriptors2[];
-
-#define CALAREG_36 8
-extern const unsigned char Caladea_Regular_36ptBitmaps[];
-extern const FontDescriptor Caladea_Regular_36ptDescriptors2[];
-
-#define CALAREG_48 9
-extern const unsigned char Caladea_Regular_48ptBitmaps[];
-extern const FontDescriptor Caladea_Regular_48ptDescriptors2[];
+#include "./Fonts/Open_Sans_Bold_24pt.h"
+#define OPENSANSBOLD_24 6
+extern const unsigned char Open_Sans_Bold_24ptBitmaps[];
+extern const FontDescriptor Open_Sans_Bold_24ptDescriptors2[];
 
 #endif

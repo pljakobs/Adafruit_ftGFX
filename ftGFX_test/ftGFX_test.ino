@@ -59,17 +59,18 @@ void setup(void) {
   tft.fillScreen(ST7735_BLACK);
   tft.setRotation(3);
 
-  tft.setTextColor(ST7735_RED, ST7735_BLACK);
-  tft.setCursor(0,36);
-  tft.printf("test");
-  //delay(10000);
-  tft.setCursor(0,27);
-  String in,out;
-  in="Tögel Jämmer\nMümmel Straßen\ncîté dorée";
-  UTF8toLatin1(in, out);
-  Serial.print("converted String:"+out);
-  tft.print(out);
-  
+  tft.setFont(OPENSANSREG_24);
+  tft.setTextColor(ST7735_BLUE, ST7735_BLACK);
+  for( char i=0x20;i<=0xff;i++){
+    tft.setCursor(0,20);
+    tft.setFont(OPENSANSREG_14);
+    tft.printf("0x%02x",i);
+    tft.setCursor(30,64);
+    tft.setFont(OPENSANSREG_24);
+    tft.printf("%c",i);
+    delay(1000);
+    tft.fillScreen(ST7735_BLACK);
+  }
 }
 
 void loop()
