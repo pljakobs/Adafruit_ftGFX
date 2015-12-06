@@ -44,6 +44,11 @@ extern const FontDescriptor Liberation_Mono_Bold_16ptDescriptors2[];
 //#include "./Fonts/Waree_Oblige.h"
 //#include "./Fonts/Waree_BoldOblige.h"
 
+#include "./Fonts/Open_Sans_Regular_10pt.h"
+#define OPENSANSREG_10 1
+extern const unsigned char Open_Sans_Regular_10ptBitmaps[];
+extern const FontDescriptor Open_Sans_Regular_10ptDescriptors2[];
+
 #include "./Fonts/Open_Sans_Regular_12pt.h"
 #define OPENSANSREG_12 1
 extern const unsigned char Open_Sans_Regular_12ptBitmaps[];
@@ -83,5 +88,21 @@ extern const FontDescriptor Open_Sans_Regular_36ptDescriptors2[];
 #define OPENSANSBOLD_36 6
 extern const unsigned char Open_Sans_Bold_36ptBitmaps[];
 extern const FontDescriptor Open_Sans_Bold_36ptDescriptors2[];
+
+#include "./Fonts/Segment7_Standard_12pt.h"
+#define SEGMENT7_12 7
+extern const unsigned char Segment7_Standard_12ptBitmaps[];
+extern const FontDescriptor Segment7_Standard_12ptDescriptors2[];
+
+#include "./Fonts/Segment7_Standard_24pt.h"
+#define SEGMENT7_24 8
+extern const unsigned char Segment7_Standard_24ptBitmaps[];
+extern const FontDescriptor Segment7_Standard_24ptDescriptors2[];
+
+#include "./Fonts/Segment7_Standard_36pt.h"
+#define SEGMENT7_36 9
+extern const unsigned char Segment7_Standard_36ptBitmaps[];
+extern const FontDescriptor Segment7_Standard_36ptDescriptors2[];
+
 
 #endif

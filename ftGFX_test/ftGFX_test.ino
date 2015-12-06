@@ -48,9 +48,9 @@ void setup(void) {
   
   Serial.begin(250000);
  
-  tft.initR(INITR_BLACKTAB);   // initialize a ST7735S chip, black tab
+  //tft.initR(INITR_BLACKTAB);   // initialize a ST7735S chip, black tab
   //tft.initR(INITR_REDTAB);   // initialize a ST7735R chip, red tab
-  //tft.initR(INITR_GREENTAB); // initialize a ST7735R chip, green tab
+  tft.initR(INITR_GREENTAB); // initialize a ST7735R chip, green tab
 
   setBacklight(255);
   //analogWrite(backlight,1024);
@@ -58,24 +58,36 @@ void setup(void) {
   
   tft.fillScreen(ST7735_BLACK);
   tft.setRotation(3);
-
-  tft.setTextColor(ST7735_BLUE, ST7735_BLACK);
-  for( char i=0x20;i!=0xff;i++){
-    tft.setTextColor(ST7735_BLUE, ST7735_BLACK);
-    tft.setCursor(0,20);
-    tft.setFont(OPENSANSREG_14);
-    tft.printf("0x%02x",i);
-    tft.setTextColor(ST7735_RED, ST7735_BLACK);
-    tft.setCursor(60,72);
-    tft.setFont(OPENSANSREG_36);
-    tft.printf("%c",i);
-    delay(1000);
-    tft.fillScreen(ST7735_BLACK);
-  }
 }
 
 void loop()
 {
+  tft.fillScreen(ST7735_WHITE);
+  tft.setFont(OPENSANSREG_12);
+  tft.setTextColor(ST7735_BLACK, ST7735_WHITE);
+  tft.setCursor(0,10);
+  String mytest="Franz fährt im übel verwahrlosten Taxi quer durch Bayern";
+  tft.print(UTF8toLatin1(mytest));
+  delay(5000);
+  tft.setTextColor(ST7735_BLUE, ST7735_BLACK);
+  for( char i=0x20;i!=0x00;i++){
+    if (i==0x80) i=0xa0;
+    tft.setTextColor(ST7735_BLUE, ST7735_BLACK);
+    tft.setCursor(0,20);
+    tft.setFont(OPENSANSREG_14);
+    tft.printf("0x%02x",i);
+    tft.fillRect(0,35,160,45,make565color(160,160,160));
+    tft.setTextColor(ST7735_RED, make565color(160,160,160));
+    tft.setCursor(20,70);
+    tft.setFont(OPENSANSREG_36);
+    tft.printf("%c%c%c%c%c",i-2,i-1,i,i+1,i+2);
+    tft.setCursor(00,120);
+    tft.setFont(SEGMENT7_24);
+    tft.setTextColor(ST7735_GREEN, ST7735_BLACK);
+    tft.printf("dec %02d",i);
+    delay(1000);
+    tft.fillScreen(ST7735_BLACK);
+  }
 }
 
 time_t getTeensy3Time()
@@ -90,8 +102,9 @@ void setBacklight(uint8_t l ){
   analogWrite(backlight,l);
 }
 
-void UTF8toLatin1( String& in, String& out){
-  for(int i=0;i<in.length();i++){
+String UTF8toLatin1( String& in){
+  String out;
+  for(uint16_t i=0;i<in.length();i++){
     if (in[i]<0x7f){
       out+=in[i];
     }else if(in[i] == 0xc2){
@@ -100,4 +113,11 @@ void UTF8toLatin1( String& in, String& out){
       out+=(char)(in[++i]+0x40);
     }
   }
+  return out ;
 }
+
+uint16_t make565color(uint8_t r, uint8_t g, uint8_t b){
+  return (r & 0xf8)<<8|(g & 0xfa)<<3|(b >> 3);
+}
+
+
