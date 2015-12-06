@@ -63,6 +63,30 @@ void Adafruit_GFX::setFont(uint8_t f) {
   font = f;
   switch(font) {
 
+  	#ifdef SEGMENT7_12
+	case SEGMENT7_12:
+		fontData = Segment7_Standard_12ptBitmaps;
+		fontDesc = Segment7_Standard_12ptDescriptors2;
+		fontKern = 0;
+		break;
+	#endif
+
+  	#ifdef SEGMENT7_24
+	case SEGMENT7_24:
+		fontData = Segment7_Standard_24ptBitmaps;
+		fontDesc = Segment7_Standard_24ptDescriptors2;
+		fontKern = 0;
+		break;
+	#endif
+	
+  	#ifdef SEGMENT7_36
+	case SEGMENT7_36:
+		fontData = Segment7_Standard_36ptBitmaps;
+		fontDesc = Segment7_Standard_36ptDescriptors2;
+		fontKern = 0;
+		break;
+	#endif
+	
 	#ifdef OPENSANSREG_12
 	case OPENSANSREG_12:
 		fontData = Open_Sans_Regular_12ptBitmaps;
@@ -75,6 +99,13 @@ void Adafruit_GFX::setFont(uint8_t f) {
 	case OPENSANSREG_14:
 		fontData = Open_Sans_Regular_14ptBitmaps;
 		fontDesc = Open_Sans_Regular_14ptDescriptors2;
+		fontKern = 0;
+		break;
+	#endif
+	#ifdef OPENSANSBOLD_10
+	case OPENSANSBOLD_10:
+		fontData = Open_Sans_Bold_10ptBitmaps;
+		fontDesc = Open_Sans_Bold_10ptDescriptors2;
 		fontKern = 0;
 		break;
 	#endif
@@ -803,7 +834,7 @@ uint16_t Adafruit_GFX::getStringWidth(String s){
 	uint16_t w=0;
 	//uint8_t c=s[0];
 	while(uint8_t c=s[i++]){
-		w+=pgm_read_byte(&fontDesc[c].xAdvance)+fontKern;
+		w+=pgm_read_byte(&fontDesc[c-0x20].xAdvance)+fontKern;
 	}
 	return w;
 }
