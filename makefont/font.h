@@ -4,27 +4,6 @@
 
 #include <stdint.h>
 
-typedef struct _FontDescriptor {
-  int8_t       xMin;
-  int8_t       xMax;
-  int8_t       yMin;
-  int8_t       yMax;
-  int8_t       xAdvance;
-  uint16_t     offset;
-  uint16_t     unicode;
-} FontDescriptor;
-
-typedef struct _FontProperties {
-  uint8_t      height;
-  int8_t       ascender;
-  int8_t       descender;
-  int16_t      flags;
-  char         family[32];
-  char         style[32];
-  int8_t       underline_position;
-  uint8_t      underline_thickness;
-} FontProperties;
-
 #define FF_SERIF          ( 1L <<  0 )
 #define FF_SANS           ( 1L <<  1 )
 #define FF_FIXED          ( 1L <<  2 )

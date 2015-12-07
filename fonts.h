@@ -11,7 +11,7 @@
 #ifndef _fonts_h
 #define _fonts_h
 
-typedef struct _FontProperties {
+typedef struct _fontProperties {
   uint8_t      height;
   int8_t       ascender;
   int8_t       descender;
@@ -20,7 +20,7 @@ typedef struct _FontProperties {
   int16_t      flags;
   char         family[32];
   char         style[32];
-} FontProperties;
+} fontProperties;
 
 typedef struct _FontDescriptor {
   int8_t       xMin;
@@ -55,7 +55,7 @@ extern const FontDescriptor Liberation_Mono_Bold_16ptDescriptors2[];
 //#include "./Fonts/Waree_Oblige.h"
 //#include "./Fonts/Waree_BoldOblige.h"
 
-
+/*
 #include "./Fonts/Open_Sans_Bold_10pt.h"
 #define OPENSANSBOLD_10 1
 extern const FontProperties Open_Sans_Bold_10ptProperties;
@@ -85,13 +85,13 @@ extern const FontDescriptor Open_Sans_Bold_16ptDescriptors2[];
 extern const FontProperties Open_Sans_Bold_18ptProperties;
 extern const unsigned char Open_Sans_Bold_18ptBitmaps[];
 extern const FontDescriptor Open_Sans_Bold_18ptDescriptors2[];
-
+*/
 #include "./Fonts/Open_Sans_Bold_20pt.h"
 #define OPENSANSBOLD_20 6
 extern const FontProperties Open_Sans_Bold_20ptProperties;
 extern const unsigned char Open_Sans_Bold_20ptBitmaps[];
 extern const FontDescriptor Open_Sans_Bold_20ptDescriptors2[];
-
+/*
 #include "./Fonts/Open_Sans_Bold_24pt.h"
 #define OPENSANSBOLD_24 8
 extern const FontProperties Open_Sans_Bold_24ptProperties;
@@ -104,7 +104,6 @@ extern const FontProperties Open_Sans_Bold_28ptProperties;
 extern const unsigned char Open_Sans_Bold_28ptBitmaps[];
 extern const FontDescriptor Open_Sans_Bold_28ptDescriptors2[];
 
-/*
 #include "./Fonts/Segment7_Standard_12pt.h"
 #define SEGMENT7_12 11
 extern const FontProperties Segment7_Standard_12Properties;
