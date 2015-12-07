@@ -17,7 +17,6 @@ found 1 charmaps
 * fontdescriptor[0x20].yMax     = 0;
 * fontdescriptor[0x20].offset   = 0x0000;
 * fontdescriptor[0x20].xAdvance = 15;
-* fontdescriptor[0x20].yadvance = 36;
 * fontdescriptor[0x20].unicode  = U-0020;
 ************************************************
 *
@@ -33,7 +32,6 @@ found 1 charmaps
 * fontdescriptor[0x21].yMax     = 41;
 * fontdescriptor[0x21].offset   = 0x0000;
 * fontdescriptor[0x21].xAdvance = 15;
-* fontdescriptor[0x21].yadvance = 36;
 * fontdescriptor[0x21].unicode  = U-0021;
 ************************************************
 *
@@ -91,7 +89,6 @@ found 1 charmaps
 * fontdescriptor[0x22].yMax     = 41;
 * fontdescriptor[0x22].offset   = 0x0054;
 * fontdescriptor[0x22].xAdvance = 22;
-* fontdescriptor[0x22].yadvance = 36;
 * fontdescriptor[0x22].unicode  = U-0022;
 ************************************************
 *
@@ -122,7 +119,6 @@ found 1 charmaps
 * fontdescriptor[0x23].yMax     = 41;
 * fontdescriptor[0x23].offset   = 0x0081;
 * fontdescriptor[0x23].xAdvance = 37;
-* fontdescriptor[0x23].yadvance = 36;
 * fontdescriptor[0x23].unicode  = U-0023;
 ************************************************
 *
@@ -179,7 +175,6 @@ found 1 charmaps
 * fontdescriptor[0x24].yMax     = 43;
 * fontdescriptor[0x24].offset   = 0x014e;
 * fontdescriptor[0x24].xAdvance = 31;
-* fontdescriptor[0x24].yadvance = 36;
 * fontdescriptor[0x24].unicode  = U-0024;
 ************************************************
 *
@@ -241,7 +236,6 @@ found 1 charmaps
 * fontdescriptor[0x25].yMax     = 41;
 * fontdescriptor[0x25].offset   = 0x0206;
 * fontdescriptor[0x25].xAdvance = 45;
-* fontdescriptor[0x25].yadvance = 36;
 * fontdescriptor[0x25].unicode  = U-0025;
 ************************************************
 *
@@ -299,7 +293,6 @@ found 1 charmaps
 * fontdescriptor[0x26].yMax     = 41;
 * fontdescriptor[0x26].offset   = 0x02d8;
 * fontdescriptor[0x26].xAdvance = 38;
-* fontdescriptor[0x26].yadvance = 36;
 * fontdescriptor[0x26].unicode  = U-0026;
 ************************************************
 *
@@ -357,7 +350,6 @@ found 1 charmaps
 * fontdescriptor[0x27].yMax     = 41;
 * fontdescriptor[0x27].offset   = 0x03aa;
 * fontdescriptor[0x27].xAdvance = 12;
-* fontdescriptor[0x27].yadvance = 36;
 * fontdescriptor[0x27].unicode  = U-0027;
 ************************************************
 *
@@ -388,7 +380,6 @@ found 1 charmaps
 * fontdescriptor[0x28].yMax     = 41;
 * fontdescriptor[0x28].offset   = 0x03b9;
 * fontdescriptor[0x28].xAdvance = 16;
-* fontdescriptor[0x28].yadvance = 36;
 * fontdescriptor[0x28].unicode  = U-0028;
 ************************************************
 *
@@ -454,7 +445,6 @@ found 1 charmaps
 * fontdescriptor[0x29].yMax     = 41;
 * fontdescriptor[0x29].offset   = 0x044f;
 * fontdescriptor[0x29].xAdvance = 16;
-* fontdescriptor[0x29].yadvance = 36;
 * fontdescriptor[0x29].unicode  = U-0029;
 ************************************************
 *
@@ -520,7 +510,6 @@ found 1 charmaps
 * fontdescriptor[0x2a].yMax     = 43;
 * fontdescriptor[0x2a].offset   = 0x04e5;
 * fontdescriptor[0x2a].xAdvance = 31;
-* fontdescriptor[0x2a].yadvance = 36;
 * fontdescriptor[0x2a].unicode  = U-002a;
 ************************************************
 *
@@ -562,7 +551,6 @@ found 1 charmaps
 * fontdescriptor[0x2b].yMax     = 33;
 * fontdescriptor[0x2b].offset   = 0x054d;
 * fontdescriptor[0x2b].xAdvance = 31;
-* fontdescriptor[0x2b].yadvance = 36;
 * fontdescriptor[0x2b].unicode  = U-002b;
 ************************************************
 *
@@ -604,7 +592,6 @@ found 1 charmaps
 * fontdescriptor[0x2c].yMax     = 7;
 * fontdescriptor[0x2c].offset   = 0x05b5;
 * fontdescriptor[0x2c].xAdvance = 14;
-* fontdescriptor[0x2c].yadvance = 36;
 * fontdescriptor[0x2c].unicode  = U-002c;
 ************************************************
 *
@@ -634,7 +621,6 @@ found 1 charmaps
 * fontdescriptor[0x2d].yMax     = 17;
 * fontdescriptor[0x2d].offset   = 0x05d1;
 * fontdescriptor[0x2d].xAdvance = 18;
-* fontdescriptor[0x2d].yadvance = 36;
 * fontdescriptor[0x2d].unicode  = U-002d;
 ************************************************
 *
@@ -655,7 +641,6 @@ found 1 charmaps
 * fontdescriptor[0x2e].yMax     = 7;
 * fontdescriptor[0x2e].offset   = 0x05db;
 * fontdescriptor[0x2e].xAdvance = 14;
-* fontdescriptor[0x2e].yadvance = 36;
 * fontdescriptor[0x2e].unicode  = U-002e;
 ************************************************
 *
@@ -679,7 +664,6 @@ found 1 charmaps
 * fontdescriptor[0x2f].yMax     = 41;
 * fontdescriptor[0x2f].offset   = 0x05e3;
 * fontdescriptor[0x2f].xAdvance = 20;
-* fontdescriptor[0x2f].yadvance = 36;
 * fontdescriptor[0x2f].unicode  = U-002f;
 ************************************************
 *
@@ -736,7 +720,6 @@ found 1 charmaps
 * fontdescriptor[0x30].yMax     = 41;
 * fontdescriptor[0x30].offset   = 0x0687;
 * fontdescriptor[0x30].xAdvance = 31;
-* fontdescriptor[0x30].yadvance = 36;
 * fontdescriptor[0x30].unicode  = U-0030;
 ************************************************
 *
@@ -794,7 +777,6 @@ found 1 charmaps
 * fontdescriptor[0x31].yMax     = 41;
 * fontdescriptor[0x31].offset   = 0x072f;
 * fontdescriptor[0x31].xAdvance = 31;
-* fontdescriptor[0x31].yadvance = 36;
 * fontdescriptor[0x31].unicode  = U-0031;
 ************************************************
 *
@@ -851,7 +833,6 @@ found 1 charmaps
 * fontdescriptor[0x32].yMax     = 41;
 * fontdescriptor[0x32].offset   = 0x07aa;
 * fontdescriptor[0x32].xAdvance = 31;
-* fontdescriptor[0x32].yadvance = 36;
 * fontdescriptor[0x32].unicode  = U-0032;
 ************************************************
 *
@@ -908,7 +889,6 @@ found 1 charmaps
 * fontdescriptor[0x33].yMax     = 41;
 * fontdescriptor[0x33].offset   = 0x084e;
 * fontdescriptor[0x33].xAdvance = 31;
-* fontdescriptor[0x33].yadvance = 36;
 * fontdescriptor[0x33].unicode  = U-0033;
 ************************************************
 *
@@ -966,7 +946,6 @@ found 1 charmaps
 * fontdescriptor[0x34].yMax     = 41;
 * fontdescriptor[0x34].offset   = 0x08f6;
 * fontdescriptor[0x34].xAdvance = 31;
-* fontdescriptor[0x34].yadvance = 36;
 * fontdescriptor[0x34].unicode  = U-0034;
 ************************************************
 *
@@ -1023,7 +1002,6 @@ found 1 charmaps
 * fontdescriptor[0x35].yMax     = 41;
 * fontdescriptor[0x35].offset   = 0x099a;
 * fontdescriptor[0x35].xAdvance = 31;
-* fontdescriptor[0x35].yadvance = 36;
 * fontdescriptor[0x35].unicode  = U-0035;
 ************************************************
 *
@@ -1081,7 +1059,6 @@ found 1 charmaps
 * fontdescriptor[0x36].yMax     = 41;
 * fontdescriptor[0x36].offset   = 0x0a42;
 * fontdescriptor[0x36].xAdvance = 31;
-* fontdescriptor[0x36].yadvance = 36;
 * fontdescriptor[0x36].unicode  = U-0036;
 ************************************************
 *
@@ -1139,7 +1116,6 @@ found 1 charmaps
 * fontdescriptor[0x37].yMax     = 41;
 * fontdescriptor[0x37].offset   = 0x0aea;
 * fontdescriptor[0x37].xAdvance = 31;
-* fontdescriptor[0x37].yadvance = 36;
 * fontdescriptor[0x37].unicode  = U-0037;
 ************************************************
 *
@@ -1196,7 +1172,6 @@ found 1 charmaps
 * fontdescriptor[0x38].yMax     = 41;
 * fontdescriptor[0x38].offset   = 0x0b8e;
 * fontdescriptor[0x38].xAdvance = 31;
-* fontdescriptor[0x38].yadvance = 36;
 * fontdescriptor[0x38].unicode  = U-0038;
 ************************************************
 *
@@ -1254,7 +1229,6 @@ found 1 charmaps
 * fontdescriptor[0x39].yMax     = 41;
 * fontdescriptor[0x39].offset   = 0x0c36;
 * fontdescriptor[0x39].xAdvance = 31;
-* fontdescriptor[0x39].yadvance = 36;
 * fontdescriptor[0x39].unicode  = U-0039;
 ************************************************
 *
@@ -1312,7 +1286,6 @@ found 1 charmaps
 * fontdescriptor[0x3a].yMax     = 31;
 * fontdescriptor[0x3a].offset   = 0x0cde;
 * fontdescriptor[0x3a].xAdvance = 14;
-* fontdescriptor[0x3a].yadvance = 36;
 * fontdescriptor[0x3a].unicode  = U-003a;
 ************************************************
 *
@@ -1360,7 +1333,6 @@ found 1 charmaps
 * fontdescriptor[0x3b].yMax     = 31;
 * fontdescriptor[0x3b].offset   = 0x0d1e;
 * fontdescriptor[0x3b].xAdvance = 14;
-* fontdescriptor[0x3b].yadvance = 36;
 * fontdescriptor[0x3b].unicode  = U-003b;
 ************************************************
 *
@@ -1414,7 +1386,6 @@ found 1 charmaps
 * fontdescriptor[0x3c].yMax     = 35;
 * fontdescriptor[0x3c].offset   = 0x0d6a;
 * fontdescriptor[0x3c].xAdvance = 31;
-* fontdescriptor[0x3c].yadvance = 36;
 * fontdescriptor[0x3c].unicode  = U-003c;
 ************************************************
 *
@@ -1458,7 +1429,6 @@ found 1 charmaps
 * fontdescriptor[0x3d].yMax     = 28;
 * fontdescriptor[0x3d].offset   = 0x0dda;
 * fontdescriptor[0x3d].xAdvance = 31;
-* fontdescriptor[0x3d].yadvance = 36;
 * fontdescriptor[0x3d].unicode  = U-003d;
 ************************************************
 *
@@ -1489,7 +1459,6 @@ found 1 charmaps
 * fontdescriptor[0x3e].yMax     = 35;
 * fontdescriptor[0x3e].offset   = 0x0e16;
 * fontdescriptor[0x3e].xAdvance = 31;
-* fontdescriptor[0x3e].yadvance = 36;
 * fontdescriptor[0x3e].unicode  = U-003e;
 ************************************************
 *
@@ -1533,7 +1502,6 @@ found 1 charmaps
 * fontdescriptor[0x3f].yMax     = 41;
 * fontdescriptor[0x3f].offset   = 0x0e86;
 * fontdescriptor[0x3f].xAdvance = 24;
-* fontdescriptor[0x3f].yadvance = 36;
 * fontdescriptor[0x3f].unicode  = U-003f;
 ************************************************
 *
@@ -1591,7 +1559,6 @@ found 1 charmaps
 * fontdescriptor[0x40].yMax     = 41;
 * fontdescriptor[0x40].offset   = 0x0f04;
 * fontdescriptor[0x40].xAdvance = 48;
-* fontdescriptor[0x40].yadvance = 36;
 * fontdescriptor[0x40].unicode  = U-0040;
 ************************************************
 *
@@ -1653,7 +1620,6 @@ found 1 charmaps
 * fontdescriptor[0x41].yMax     = 41;
 * fontdescriptor[0x41].offset   = 0x1018;
 * fontdescriptor[0x41].xAdvance = 32;
-* fontdescriptor[0x41].yadvance = 36;
 * fontdescriptor[0x41].unicode  = U-0041;
 ************************************************
 *
@@ -1710,7 +1676,6 @@ found 1 charmaps
 * fontdescriptor[0x42].yMax     = 41;
 * fontdescriptor[0x42].offset   = 0x10e5;
 * fontdescriptor[0x42].xAdvance = 34;
-* fontdescriptor[0x42].yadvance = 36;
 * fontdescriptor[0x42].unicode  = U-0042;
 ************************************************
 *
@@ -1767,7 +1732,6 @@ found 1 charmaps
 * fontdescriptor[0x43].yMax     = 41;
 * fontdescriptor[0x43].offset   = 0x1189;
 * fontdescriptor[0x43].xAdvance = 33;
-* fontdescriptor[0x43].yadvance = 36;
 * fontdescriptor[0x43].unicode  = U-0043;
 ************************************************
 *
@@ -1825,7 +1789,6 @@ found 1 charmaps
 * fontdescriptor[0x44].yMax     = 41;
 * fontdescriptor[0x44].offset   = 0x1231;
 * fontdescriptor[0x44].xAdvance = 38;
-* fontdescriptor[0x44].yadvance = 36;
 * fontdescriptor[0x44].unicode  = U-0044;
 ************************************************
 *
@@ -1882,7 +1845,6 @@ found 1 charmaps
 * fontdescriptor[0x45].yMax     = 41;
 * fontdescriptor[0x45].offset   = 0x12fe;
 * fontdescriptor[0x45].xAdvance = 29;
-* fontdescriptor[0x45].yadvance = 36;
 * fontdescriptor[0x45].unicode  = U-0045;
 ************************************************
 *
@@ -1939,7 +1901,6 @@ found 1 charmaps
 * fontdescriptor[0x46].yMax     = 41;
 * fontdescriptor[0x46].offset   = 0x13a2;
 * fontdescriptor[0x46].xAdvance = 27;
-* fontdescriptor[0x46].yadvance = 36;
 * fontdescriptor[0x46].unicode  = U-0046;
 ************************************************
 *
@@ -1996,7 +1957,6 @@ found 1 charmaps
 * fontdescriptor[0x47].yMax     = 41;
 * fontdescriptor[0x47].offset   = 0x1446;
 * fontdescriptor[0x47].xAdvance = 39;
-* fontdescriptor[0x47].yadvance = 36;
 * fontdescriptor[0x47].unicode  = U-0047;
 ************************************************
 *
@@ -2054,7 +2014,6 @@ found 1 charmaps
 * fontdescriptor[0x48].yMax     = 41;
 * fontdescriptor[0x48].offset   = 0x1518;
 * fontdescriptor[0x48].xAdvance = 39;
-* fontdescriptor[0x48].yadvance = 36;
 * fontdescriptor[0x48].unicode  = U-0048;
 ************************************************
 *
@@ -2111,7 +2070,6 @@ found 1 charmaps
 * fontdescriptor[0x49].yMax     = 41;
 * fontdescriptor[0x49].offset   = 0x15e5;
 * fontdescriptor[0x49].xAdvance = 16;
-* fontdescriptor[0x49].yadvance = 36;
 * fontdescriptor[0x49].unicode  = U-0049;
 ************************************************
 *
@@ -2168,7 +2126,6 @@ found 1 charmaps
 * fontdescriptor[0x4a].yMax     = 41;
 * fontdescriptor[0x4a].offset   = 0x1637;
 * fontdescriptor[0x4a].xAdvance = 15;
-* fontdescriptor[0x4a].yadvance = 36;
 * fontdescriptor[0x4a].unicode  = U-004a;
 ************************************************
 *
@@ -2236,7 +2193,6 @@ found 1 charmaps
 * fontdescriptor[0x4b].yMax     = 41;
 * fontdescriptor[0x4b].offset   = 0x1707;
 * fontdescriptor[0x4b].xAdvance = 32;
-* fontdescriptor[0x4b].yadvance = 36;
 * fontdescriptor[0x4b].unicode  = U-004b;
 ************************************************
 *
@@ -2293,7 +2249,6 @@ found 1 charmaps
 * fontdescriptor[0x4c].yMax     = 41;
 * fontdescriptor[0x4c].offset   = 0x17d4;
 * fontdescriptor[0x4c].xAdvance = 27;
-* fontdescriptor[0x4c].yadvance = 36;
 * fontdescriptor[0x4c].unicode  = U-004c;
 ************************************************
 *
@@ -2350,7 +2305,6 @@ found 1 charmaps
 * fontdescriptor[0x4d].yMax     = 41;
 * fontdescriptor[0x4d].offset   = 0x184f;
 * fontdescriptor[0x4d].xAdvance = 48;
-* fontdescriptor[0x4d].yadvance = 36;
 * fontdescriptor[0x4d].unicode  = U-004d;
 ************************************************
 *
@@ -2407,7 +2361,6 @@ found 1 charmaps
 * fontdescriptor[0x4e].yMax     = 41;
 * fontdescriptor[0x4e].offset   = 0x1945;
 * fontdescriptor[0x4e].xAdvance = 40;
-* fontdescriptor[0x4e].yadvance = 36;
 * fontdescriptor[0x4e].unicode  = U-004e;
 ************************************************
 *
@@ -2464,7 +2417,6 @@ found 1 charmaps
 * fontdescriptor[0x4f].yMax     = 41;
 * fontdescriptor[0x4f].offset   = 0x1a12;
 * fontdescriptor[0x4f].xAdvance = 41;
-* fontdescriptor[0x4f].yadvance = 36;
 * fontdescriptor[0x4f].unicode  = U-004f;
 ************************************************
 *
@@ -2522,7 +2474,6 @@ found 1 charmaps
 * fontdescriptor[0x50].yMax     = 41;
 * fontdescriptor[0x50].offset   = 0x1ae4;
 * fontdescriptor[0x50].xAdvance = 32;
-* fontdescriptor[0x50].yadvance = 36;
 * fontdescriptor[0x50].unicode  = U-0050;
 ************************************************
 *
@@ -2579,7 +2530,6 @@ found 1 charmaps
 * fontdescriptor[0x51].yMax     = 41;
 * fontdescriptor[0x51].offset   = 0x1b88;
 * fontdescriptor[0x51].xAdvance = 41;
-* fontdescriptor[0x51].yadvance = 36;
 * fontdescriptor[0x51].unicode  = U-0051;
 ************************************************
 *
@@ -2646,7 +2596,6 @@ found 1 charmaps
 * fontdescriptor[0x52].yMax     = 41;
 * fontdescriptor[0x52].offset   = 0x1c87;
 * fontdescriptor[0x52].xAdvance = 32;
-* fontdescriptor[0x52].yadvance = 36;
 * fontdescriptor[0x52].unicode  = U-0052;
 ************************************************
 *
@@ -2703,7 +2652,6 @@ found 1 charmaps
 * fontdescriptor[0x53].yMax     = 41;
 * fontdescriptor[0x53].offset   = 0x1d2b;
 * fontdescriptor[0x53].xAdvance = 29;
-* fontdescriptor[0x53].yadvance = 36;
 * fontdescriptor[0x53].unicode  = U-0053;
 ************************************************
 *
@@ -2761,7 +2709,6 @@ found 1 charmaps
 * fontdescriptor[0x54].yMax     = 41;
 * fontdescriptor[0x54].offset   = 0x1dd3;
 * fontdescriptor[0x54].xAdvance = 28;
-* fontdescriptor[0x54].yadvance = 36;
 * fontdescriptor[0x54].unicode  = U-0054;
 ************************************************
 *
@@ -2818,7 +2765,6 @@ found 1 charmaps
 * fontdescriptor[0x55].yMax     = 41;
 * fontdescriptor[0x55].offset   = 0x1e77;
 * fontdescriptor[0x55].xAdvance = 39;
-* fontdescriptor[0x55].yadvance = 36;
 * fontdescriptor[0x55].unicode  = U-0055;
 ************************************************
 *
@@ -2876,7 +2822,6 @@ found 1 charmaps
 * fontdescriptor[0x56].yMax     = 41;
 * fontdescriptor[0x56].offset   = 0x1f49;
 * fontdescriptor[0x56].xAdvance = 31;
-* fontdescriptor[0x56].yadvance = 36;
 * fontdescriptor[0x56].unicode  = U-0056;
 ************************************************
 *
@@ -2933,7 +2878,6 @@ found 1 charmaps
 * fontdescriptor[0x57].yMax     = 41;
 * fontdescriptor[0x57].offset   = 0x1fed;
 * fontdescriptor[0x57].xAdvance = 49;
-* fontdescriptor[0x57].yadvance = 36;
 * fontdescriptor[0x57].unicode  = U-0057;
 ************************************************
 *
@@ -2990,7 +2934,6 @@ found 1 charmaps
 * fontdescriptor[0x58].yMax     = 41;
 * fontdescriptor[0x58].offset   = 0x20e3;
 * fontdescriptor[0x58].xAdvance = 30;
-* fontdescriptor[0x58].yadvance = 36;
 * fontdescriptor[0x58].unicode  = U-0058;
 ************************************************
 *
@@ -3047,7 +2990,6 @@ found 1 charmaps
 * fontdescriptor[0x59].yMax     = 41;
 * fontdescriptor[0x59].offset   = 0x21b0;
 * fontdescriptor[0x59].xAdvance = 29;
-* fontdescriptor[0x59].yadvance = 36;
 * fontdescriptor[0x59].unicode  = U-0059;
 ************************************************
 *
@@ -3104,7 +3046,6 @@ found 1 charmaps
 * fontdescriptor[0x5a].yMax     = 41;
 * fontdescriptor[0x5a].offset   = 0x2254;
 * fontdescriptor[0x5a].xAdvance = 30;
-* fontdescriptor[0x5a].yadvance = 36;
 * fontdescriptor[0x5a].unicode  = U-005a;
 ************************************************
 *
@@ -3161,7 +3102,6 @@ found 1 charmaps
 * fontdescriptor[0x5b].yMax     = 41;
 * fontdescriptor[0x5b].offset   = 0x2321;
 * fontdescriptor[0x5b].xAdvance = 16;
-* fontdescriptor[0x5b].yadvance = 36;
 * fontdescriptor[0x5b].unicode  = U-005b;
 ************************************************
 *
@@ -3227,7 +3167,6 @@ found 1 charmaps
 * fontdescriptor[0x5c].yMax     = 41;
 * fontdescriptor[0x5c].offset   = 0x23b7;
 * fontdescriptor[0x5c].xAdvance = 20;
-* fontdescriptor[0x5c].yadvance = 36;
 * fontdescriptor[0x5c].unicode  = U-005c;
 ************************************************
 *
@@ -3284,7 +3223,6 @@ found 1 charmaps
 * fontdescriptor[0x5d].yMax     = 41;
 * fontdescriptor[0x5d].offset   = 0x2409;
 * fontdescriptor[0x5d].xAdvance = 16;
-* fontdescriptor[0x5d].yadvance = 36;
 * fontdescriptor[0x5d].unicode  = U-005d;
 ************************************************
 *
@@ -3350,7 +3288,6 @@ found 1 charmaps
 * fontdescriptor[0x5e].yMax     = 41;
 * fontdescriptor[0x5e].offset   = 0x249f;
 * fontdescriptor[0x5e].xAdvance = 29;
-* fontdescriptor[0x5e].yadvance = 36;
 * fontdescriptor[0x5e].unicode  = U-005e;
 ************************************************
 *
@@ -3392,7 +3329,6 @@ found 1 charmaps
 * fontdescriptor[0x5f].yMax     = -5;
 * fontdescriptor[0x5f].offset   = 0x2507;
 * fontdescriptor[0x5f].xAdvance = 22;
-* fontdescriptor[0x5f].yadvance = 36;
 * fontdescriptor[0x5f].unicode  = U-005f;
 ************************************************
 *
@@ -3412,7 +3348,6 @@ found 1 charmaps
 * fontdescriptor[0x60].yMax     = 44;
 * fontdescriptor[0x60].offset   = 0x2517;
 * fontdescriptor[0x60].xAdvance = 32;
-* fontdescriptor[0x60].yadvance = 36;
 * fontdescriptor[0x60].unicode  = U-0060;
 ************************************************
 *
@@ -3437,7 +3372,6 @@ found 1 charmaps
 * fontdescriptor[0x61].yMax     = 31;
 * fontdescriptor[0x61].offset   = 0x2529;
 * fontdescriptor[0x61].xAdvance = 32;
-* fontdescriptor[0x61].yadvance = 36;
 * fontdescriptor[0x61].unicode  = U-0061;
 ************************************************
 *
@@ -3485,7 +3419,6 @@ found 1 charmaps
 * fontdescriptor[0x62].yMax     = 43;
 * fontdescriptor[0x62].offset   = 0x25a9;
 * fontdescriptor[0x62].xAdvance = 33;
-* fontdescriptor[0x62].yadvance = 36;
 * fontdescriptor[0x62].unicode  = U-0062;
 ************************************************
 *
@@ -3545,7 +3478,6 @@ found 1 charmaps
 * fontdescriptor[0x63].yMax     = 31;
 * fontdescriptor[0x63].offset   = 0x2659;
 * fontdescriptor[0x63].xAdvance = 26;
-* fontdescriptor[0x63].yadvance = 36;
 * fontdescriptor[0x63].unicode  = U-0063;
 ************************************************
 *
@@ -3593,7 +3525,6 @@ found 1 charmaps
 * fontdescriptor[0x64].yMax     = 43;
 * fontdescriptor[0x64].offset   = 0x26d9;
 * fontdescriptor[0x64].xAdvance = 33;
-* fontdescriptor[0x64].yadvance = 36;
 * fontdescriptor[0x64].unicode  = U-0064;
 ************************************************
 *
@@ -3653,7 +3584,6 @@ found 1 charmaps
 * fontdescriptor[0x65].yMax     = 31;
 * fontdescriptor[0x65].offset   = 0x2789;
 * fontdescriptor[0x65].xAdvance = 28;
-* fontdescriptor[0x65].yadvance = 36;
 * fontdescriptor[0x65].unicode  = U-0065;
 ************************************************
 *
@@ -3701,7 +3631,6 @@ found 1 charmaps
 * fontdescriptor[0x66].yMax     = 43;
 * fontdescriptor[0x66].offset   = 0x2809;
 * fontdescriptor[0x66].xAdvance = 18;
-* fontdescriptor[0x66].yadvance = 36;
 * fontdescriptor[0x66].unicode  = U-0066;
 ************************************************
 *
@@ -3774,7 +3703,6 @@ found 1 charmaps
 * fontdescriptor[0x67].yMax     = 31;
 * fontdescriptor[0x67].offset   = 0x2926;
 * fontdescriptor[0x67].xAdvance = 29;
-* fontdescriptor[0x67].yadvance = 36;
 * fontdescriptor[0x67].unicode  = U-0067;
 ************************************************
 *
@@ -3835,7 +3763,6 @@ found 1 charmaps
 * fontdescriptor[0x68].yMax     = 43;
 * fontdescriptor[0x68].offset   = 0x2a07;
 * fontdescriptor[0x68].xAdvance = 33;
-* fontdescriptor[0x68].yadvance = 36;
 * fontdescriptor[0x68].unicode  = U-0068;
 ************************************************
 *
@@ -3894,7 +3821,6 @@ found 1 charmaps
 * fontdescriptor[0x69].yMax     = 42;
 * fontdescriptor[0x69].offset   = 0x2ab3;
 * fontdescriptor[0x69].xAdvance = 14;
-* fontdescriptor[0x69].yadvance = 36;
 * fontdescriptor[0x69].unicode  = U-0069;
 ************************************************
 *
@@ -3952,7 +3878,6 @@ found 1 charmaps
 * fontdescriptor[0x6a].yMax     = 42;
 * fontdescriptor[0x6a].offset   = 0x2b07;
 * fontdescriptor[0x6a].xAdvance = 14;
-* fontdescriptor[0x6a].yadvance = 36;
 * fontdescriptor[0x6a].unicode  = U-006a;
 ************************************************
 *
@@ -4024,7 +3949,6 @@ found 1 charmaps
 * fontdescriptor[0x6b].yMax     = 43;
 * fontdescriptor[0x6b].offset   = 0x2baf;
 * fontdescriptor[0x6b].xAdvance = 28;
-* fontdescriptor[0x6b].yadvance = 36;
 * fontdescriptor[0x6b].unicode  = U-006b;
 ************************************************
 *
@@ -4083,7 +4007,6 @@ found 1 charmaps
 * fontdescriptor[0x6c].yMax     = 43;
 * fontdescriptor[0x6c].offset   = 0x2c5b;
 * fontdescriptor[0x6c].xAdvance = 14;
-* fontdescriptor[0x6c].yadvance = 36;
 * fontdescriptor[0x6c].unicode  = U-006c;
 ************************************************
 *
@@ -4142,7 +4065,6 @@ found 1 charmaps
 * fontdescriptor[0x6d].yMax     = 31;
 * fontdescriptor[0x6d].offset   = 0x2cb1;
 * fontdescriptor[0x6d].xAdvance = 50;
-* fontdescriptor[0x6d].yadvance = 36;
 * fontdescriptor[0x6d].unicode  = U-006d;
 ************************************************
 *
@@ -4189,7 +4111,6 @@ found 1 charmaps
 * fontdescriptor[0x6e].yMax     = 31;
 * fontdescriptor[0x6e].offset   = 0x2d6b;
 * fontdescriptor[0x6e].xAdvance = 33;
-* fontdescriptor[0x6e].yadvance = 36;
 * fontdescriptor[0x6e].unicode  = U-006e;
 ************************************************
 *
@@ -4236,7 +4157,6 @@ found 1 charmaps
 * fontdescriptor[0x6f].yMax     = 31;
 * fontdescriptor[0x6f].offset   = 0x2de7;
 * fontdescriptor[0x6f].xAdvance = 32;
-* fontdescriptor[0x6f].yadvance = 36;
 * fontdescriptor[0x6f].unicode  = U-006f;
 ************************************************
 *
@@ -4283,7 +4203,6 @@ found 1 charmaps
 * fontdescriptor[0x70].yMax     = 31;
 * fontdescriptor[0x70].offset   = 0x2e63;
 * fontdescriptor[0x70].xAdvance = 33;
-* fontdescriptor[0x70].yadvance = 36;
 * fontdescriptor[0x70].unicode  = U-0070;
 ************************************************
 *
@@ -4344,7 +4263,6 @@ found 1 charmaps
 * fontdescriptor[0x71].yMax     = 31;
 * fontdescriptor[0x71].offset   = 0x2f44;
 * fontdescriptor[0x71].xAdvance = 33;
-* fontdescriptor[0x71].yadvance = 36;
 * fontdescriptor[0x71].unicode  = U-0071;
 ************************************************
 *
@@ -4405,7 +4323,6 @@ found 1 charmaps
 * fontdescriptor[0x72].yMax     = 31;
 * fontdescriptor[0x72].offset   = 0x2ff8;
 * fontdescriptor[0x72].xAdvance = 23;
-* fontdescriptor[0x72].yadvance = 36;
 * fontdescriptor[0x72].unicode  = U-0072;
 ************************************************
 *
@@ -4452,7 +4369,6 @@ found 1 charmaps
 * fontdescriptor[0x73].yMax     = 31;
 * fontdescriptor[0x73].offset   = 0x3055;
 * fontdescriptor[0x73].xAdvance = 24;
-* fontdescriptor[0x73].yadvance = 36;
 * fontdescriptor[0x73].unicode  = U-0073;
 ************************************************
 *
@@ -4500,7 +4416,6 @@ found 1 charmaps
 * fontdescriptor[0x74].yMax     = 38;
 * fontdescriptor[0x74].offset   = 0x30b5;
 * fontdescriptor[0x74].xAdvance = 18;
-* fontdescriptor[0x74].yadvance = 36;
 * fontdescriptor[0x74].unicode  = U-0074;
 ************************************************
 *
@@ -4555,7 +4470,6 @@ found 1 charmaps
 * fontdescriptor[0x75].yMax     = 31;
 * fontdescriptor[0x75].offset   = 0x312a;
 * fontdescriptor[0x75].xAdvance = 33;
-* fontdescriptor[0x75].yadvance = 36;
 * fontdescriptor[0x75].unicode  = U-0075;
 ************************************************
 *
@@ -4603,7 +4517,6 @@ found 1 charmaps
 * fontdescriptor[0x76].yMax     = 31;
 * fontdescriptor[0x76].offset   = 0x31aa;
 * fontdescriptor[0x76].xAdvance = 26;
-* fontdescriptor[0x76].yadvance = 36;
 * fontdescriptor[0x76].unicode  = U-0076;
 ************************************************
 *
@@ -4650,7 +4563,6 @@ found 1 charmaps
 * fontdescriptor[0x77].yMax     = 31;
 * fontdescriptor[0x77].offset   = 0x3226;
 * fontdescriptor[0x77].xAdvance = 41;
-* fontdescriptor[0x77].yadvance = 36;
 * fontdescriptor[0x77].unicode  = U-0077;
 ************************************************
 *
@@ -4697,7 +4609,6 @@ found 1 charmaps
 * fontdescriptor[0x78].yMax     = 31;
 * fontdescriptor[0x78].offset   = 0x32c1;
 * fontdescriptor[0x78].xAdvance = 27;
-* fontdescriptor[0x78].yadvance = 36;
 * fontdescriptor[0x78].unicode  = U-0078;
 ************************************************
 *
@@ -4744,7 +4655,6 @@ found 1 charmaps
 * fontdescriptor[0x79].yMax     = 31;
 * fontdescriptor[0x79].offset   = 0x333d;
 * fontdescriptor[0x79].xAdvance = 26;
-* fontdescriptor[0x79].yadvance = 36;
 * fontdescriptor[0x79].unicode  = U-0079;
 ************************************************
 *
@@ -4805,7 +4715,6 @@ found 1 charmaps
 * fontdescriptor[0x7a].yMax     = 31;
 * fontdescriptor[0x7a].offset   = 0x341e;
 * fontdescriptor[0x7a].xAdvance = 25;
-* fontdescriptor[0x7a].yadvance = 36;
 * fontdescriptor[0x7a].unicode  = U-007a;
 ************************************************
 *
@@ -4852,7 +4761,6 @@ found 1 charmaps
 * fontdescriptor[0x7b].yMax     = 41;
 * fontdescriptor[0x7b].offset   = 0x349a;
 * fontdescriptor[0x7b].xAdvance = 20;
-* fontdescriptor[0x7b].yadvance = 36;
 * fontdescriptor[0x7b].unicode  = U-007b;
 ************************************************
 *
@@ -4918,7 +4826,6 @@ found 1 charmaps
 * fontdescriptor[0x7c].yMax     = 43;
 * fontdescriptor[0x7c].offset   = 0x3530;
 * fontdescriptor[0x7c].xAdvance = 31;
-* fontdescriptor[0x7c].yadvance = 36;
 * fontdescriptor[0x7c].unicode  = U-007c;
 ************************************************
 *
@@ -4991,7 +4898,6 @@ found 1 charmaps
 * fontdescriptor[0x7d].yMax     = 41;
 * fontdescriptor[0x7d].offset   = 0x3569;
 * fontdescriptor[0x7d].xAdvance = 20;
-* fontdescriptor[0x7d].yadvance = 36;
 * fontdescriptor[0x7d].unicode  = U-007d;
 ************************************************
 *
@@ -5057,7 +4963,6 @@ found 1 charmaps
 * fontdescriptor[0x7e].yMax     = 23;
 * fontdescriptor[0x7e].offset   = 0x35ff;
 * fontdescriptor[0x7e].xAdvance = 31;
-* fontdescriptor[0x7e].yadvance = 36;
 * fontdescriptor[0x7e].unicode  = U-007e;
 ************************************************
 *
@@ -5080,7 +4985,6 @@ found 1 charmaps
 * fontdescriptor[0x7f].yMax     = 41;
 * fontdescriptor[0x7f].offset   = 0x361b;
 * fontdescriptor[0x7f].xAdvance = 34;
-* fontdescriptor[0x7f].yadvance = 36;
 * fontdescriptor[0x7f].unicode  = U-007f;
 ************************************************
 *
@@ -5137,7 +5041,6 @@ found 1 charmaps
 * fontdescriptor[0xa0].yMax     = 0;
 * fontdescriptor[0xa0].offset   = 0x3696;
 * fontdescriptor[0xa0].xAdvance = 15;
-* fontdescriptor[0xa0].yadvance = 36;
 * fontdescriptor[0xa0].unicode  = U-00a0;
 ************************************************
 *
@@ -5153,7 +5056,6 @@ found 1 charmaps
 * fontdescriptor[0xa1].yMax     = 31;
 * fontdescriptor[0xa1].offset   = 0x3696;
 * fontdescriptor[0xa1].xAdvance = 15;
-* fontdescriptor[0xa1].yadvance = 36;
 * fontdescriptor[0xa1].unicode  = U-00a1;
 ************************************************
 *
@@ -5211,7 +5113,6 @@ found 1 charmaps
 * fontdescriptor[0xa2].yMax     = 41;
 * fontdescriptor[0xa2].offset   = 0x36ea;
 * fontdescriptor[0xa2].xAdvance = 31;
-* fontdescriptor[0xa2].yadvance = 36;
 * fontdescriptor[0xa2].unicode  = U-00a2;
 ************************************************
 *
@@ -5269,7 +5170,6 @@ found 1 charmaps
 * fontdescriptor[0xa3].yMax     = 41;
 * fontdescriptor[0xa3].offset   = 0x3768;
 * fontdescriptor[0xa3].xAdvance = 31;
-* fontdescriptor[0xa3].yadvance = 36;
 * fontdescriptor[0xa3].unicode  = U-00a3;
 ************************************************
 *
@@ -5326,7 +5226,6 @@ found 1 charmaps
 * fontdescriptor[0xa4].yMax     = 33;
 * fontdescriptor[0xa4].offset   = 0x3835;
 * fontdescriptor[0xa4].xAdvance = 31;
-* fontdescriptor[0xa4].yadvance = 36;
 * fontdescriptor[0xa4].unicode  = U-00a4;
 ************************************************
 *
@@ -5368,7 +5267,6 @@ found 1 charmaps
 * fontdescriptor[0xa5].yMax     = 41;
 * fontdescriptor[0xa5].offset   = 0x389d;
 * fontdescriptor[0xa5].xAdvance = 31;
-* fontdescriptor[0xa5].yadvance = 36;
 * fontdescriptor[0xa5].unicode  = U-00a5;
 ************************************************
 *
@@ -5425,7 +5323,6 @@ found 1 charmaps
 * fontdescriptor[0xa6].yMax     = 43;
 * fontdescriptor[0xa6].offset   = 0x396a;
 * fontdescriptor[0xa6].xAdvance = 31;
-* fontdescriptor[0xa6].yadvance = 36;
 * fontdescriptor[0xa6].unicode  = U-00a6;
 ************************************************
 *
@@ -5498,7 +5395,6 @@ found 1 charmaps
 * fontdescriptor[0xa7].yMax     = 43;
 * fontdescriptor[0xa7].offset   = 0x39a3;
 * fontdescriptor[0xa7].xAdvance = 28;
-* fontdescriptor[0xa7].yadvance = 36;
 * fontdescriptor[0xa7].unicode  = U-00a7;
 ************************************************
 *
@@ -5557,7 +5453,6 @@ found 1 charmaps
 * fontdescriptor[0xa8].yMax     = 41;
 * fontdescriptor[0xa8].offset   = 0x3a4f;
 * fontdescriptor[0xa8].xAdvance = 32;
-* fontdescriptor[0xa8].yadvance = 36;
 * fontdescriptor[0xa8].unicode  = U-00a8;
 ************************************************
 *
@@ -5578,7 +5473,6 @@ found 1 charmaps
 * fontdescriptor[0xa9].yMax     = 41;
 * fontdescriptor[0xa9].offset   = 0x3a59;
 * fontdescriptor[0xa9].xAdvance = 47;
-* fontdescriptor[0xa9].yadvance = 36;
 * fontdescriptor[0xa9].unicode  = U-00a9;
 ************************************************
 *
@@ -5636,7 +5530,6 @@ found 1 charmaps
 * fontdescriptor[0xaa].yMax     = 41;
 * fontdescriptor[0xaa].offset   = 0x3b55;
 * fontdescriptor[0xaa].xAdvance = 19;
-* fontdescriptor[0xaa].yadvance = 36;
 * fontdescriptor[0xaa].unicode  = U-00aa;
 ************************************************
 *
@@ -5671,7 +5564,6 @@ found 1 charmaps
 * fontdescriptor[0xab].yMax     = 27;
 * fontdescriptor[0xab].offset   = 0x3b8e;
 * fontdescriptor[0xab].xAdvance = 27;
-* fontdescriptor[0xab].yadvance = 36;
 * fontdescriptor[0xab].unicode  = U-00ab;
 ************************************************
 *
@@ -5711,7 +5603,6 @@ found 1 charmaps
 * fontdescriptor[0xac].yMax     = 22;
 * fontdescriptor[0xac].offset   = 0x3bee;
 * fontdescriptor[0xac].xAdvance = 31;
-* fontdescriptor[0xac].yadvance = 36;
 * fontdescriptor[0xac].unicode  = U-00ac;
 ************************************************
 *
@@ -5742,7 +5633,6 @@ found 1 charmaps
 * fontdescriptor[0xad].yMax     = 17;
 * fontdescriptor[0xad].offset   = 0x3c2a;
 * fontdescriptor[0xad].xAdvance = 18;
-* fontdescriptor[0xad].yadvance = 36;
 * fontdescriptor[0xad].unicode  = U-00ad;
 ************************************************
 *
@@ -5763,7 +5653,6 @@ found 1 charmaps
 * fontdescriptor[0xae].yMax     = 41;
 * fontdescriptor[0xae].offset   = 0x3c34;
 * fontdescriptor[0xae].xAdvance = 47;
-* fontdescriptor[0xae].yadvance = 36;
 * fontdescriptor[0xae].unicode  = U-00ae;
 ************************************************
 *
@@ -5821,7 +5710,6 @@ found 1 charmaps
 * fontdescriptor[0xaf].yMax     = 47;
 * fontdescriptor[0xaf].offset   = 0x3d30;
 * fontdescriptor[0xaf].xAdvance = 22;
-* fontdescriptor[0xaf].yadvance = 36;
 * fontdescriptor[0xaf].unicode  = U-00af;
 ************************************************
 *
@@ -5841,7 +5729,6 @@ found 1 charmaps
 * fontdescriptor[0xb0].yMax     = 41;
 * fontdescriptor[0xb0].offset   = 0x3d3c;
 * fontdescriptor[0xb0].xAdvance = 24;
-* fontdescriptor[0xb0].yadvance = 36;
 * fontdescriptor[0xb0].unicode  = U-00b0;
 ************************************************
 *
@@ -5874,7 +5761,6 @@ found 1 charmaps
 * fontdescriptor[0xb1].yMax     = 33;
 * fontdescriptor[0xb1].offset   = 0x3d6f;
 * fontdescriptor[0xb1].xAdvance = 31;
-* fontdescriptor[0xb1].yadvance = 36;
 * fontdescriptor[0xb1].unicode  = U-00b1;
 ************************************************
 *
@@ -5923,7 +5809,6 @@ found 1 charmaps
 * fontdescriptor[0xb2].yMax     = 41;
 * fontdescriptor[0xb2].offset   = 0x3df3;
 * fontdescriptor[0xb2].xAdvance = 20;
-* fontdescriptor[0xb2].yadvance = 36;
 * fontdescriptor[0xb2].unicode  = U-00b2;
 ************************************************
 *
@@ -5964,7 +5849,6 @@ found 1 charmaps
 * fontdescriptor[0xb3].yMax     = 41;
 * fontdescriptor[0xb3].offset   = 0x3e3e;
 * fontdescriptor[0xb3].xAdvance = 20;
-* fontdescriptor[0xb3].yadvance = 36;
 * fontdescriptor[0xb3].unicode  = U-00b3;
 ************************************************
 *
@@ -6005,7 +5889,6 @@ found 1 charmaps
 * fontdescriptor[0xb4].yMax     = 44;
 * fontdescriptor[0xb4].offset   = 0x3e89;
 * fontdescriptor[0xb4].xAdvance = 32;
-* fontdescriptor[0xb4].yadvance = 36;
 * fontdescriptor[0xb4].unicode  = U-00b4;
 ************************************************
 *
@@ -6030,7 +5913,6 @@ found 1 charmaps
 * fontdescriptor[0xb5].yMax     = 31;
 * fontdescriptor[0xb5].offset   = 0x3e9b;
 * fontdescriptor[0xb5].xAdvance = 33;
-* fontdescriptor[0xb5].yadvance = 36;
 * fontdescriptor[0xb5].unicode  = U-00b5;
 ************************************************
 *
@@ -6091,7 +5973,6 @@ found 1 charmaps
 * fontdescriptor[0xb6].yMax     = 43;
 * fontdescriptor[0xb6].offset   = 0x3f7c;
 * fontdescriptor[0xb6].xAdvance = 37;
-* fontdescriptor[0xb6].yadvance = 36;
 * fontdescriptor[0xb6].unicode  = U-00b6;
 ************************************************
 *
@@ -6157,7 +6038,6 @@ found 1 charmaps
 * fontdescriptor[0xb7].yMax     = 24;
 * fontdescriptor[0xb7].offset   = 0x4044;
 * fontdescriptor[0xb7].xAdvance = 14;
-* fontdescriptor[0xb7].yadvance = 36;
 * fontdescriptor[0xb7].unicode  = U-00b7;
 ************************************************
 *
@@ -6181,7 +6061,6 @@ found 1 charmaps
 * fontdescriptor[0xb8].yMax     = 0;
 * fontdescriptor[0xb8].offset   = 0x404c;
 * fontdescriptor[0xb8].xAdvance = 12;
-* fontdescriptor[0xb8].yadvance = 36;
 * fontdescriptor[0xb8].unicode  = U-00b8;
 ************************************************
 *
@@ -6211,7 +6090,6 @@ found 1 charmaps
 * fontdescriptor[0xb9].yMax     = 41;
 * fontdescriptor[0xb9].offset   = 0x4068;
 * fontdescriptor[0xb9].xAdvance = 20;
-* fontdescriptor[0xb9].yadvance = 36;
 * fontdescriptor[0xb9].unicode  = U-00b9;
 ************************************************
 *
@@ -6252,7 +6130,6 @@ found 1 charmaps
 * fontdescriptor[0xba].yMax     = 41;
 * fontdescriptor[0xba].offset   = 0x409a;
 * fontdescriptor[0xba].xAdvance = 19;
-* fontdescriptor[0xba].yadvance = 36;
 * fontdescriptor[0xba].unicode  = U-00ba;
 ************************************************
 *
@@ -6287,7 +6164,6 @@ found 1 charmaps
 * fontdescriptor[0xbb].yMax     = 27;
 * fontdescriptor[0xbb].offset   = 0x40d3;
 * fontdescriptor[0xbb].xAdvance = 27;
-* fontdescriptor[0xbb].yadvance = 36;
 * fontdescriptor[0xbb].unicode  = U-00bb;
 ************************************************
 *
@@ -6327,7 +6203,6 @@ found 1 charmaps
 * fontdescriptor[0xbc].yMax     = 41;
 * fontdescriptor[0xbc].offset   = 0x4133;
 * fontdescriptor[0xbc].xAdvance = 42;
-* fontdescriptor[0xbc].yadvance = 36;
 * fontdescriptor[0xbc].unicode  = U-00bc;
 ************************************************
 *
@@ -6384,7 +6259,6 @@ found 1 charmaps
 * fontdescriptor[0xbd].yMax     = 41;
 * fontdescriptor[0xbd].offset   = 0x4200;
 * fontdescriptor[0xbd].xAdvance = 42;
-* fontdescriptor[0xbd].yadvance = 36;
 * fontdescriptor[0xbd].unicode  = U-00bd;
 ************************************************
 *
@@ -6441,7 +6315,6 @@ found 1 charmaps
 * fontdescriptor[0xbe].yMax     = 41;
 * fontdescriptor[0xbe].offset   = 0x42cd;
 * fontdescriptor[0xbe].xAdvance = 44;
-* fontdescriptor[0xbe].yadvance = 36;
 * fontdescriptor[0xbe].unicode  = U-00be;
 ************************************************
 *
@@ -6498,7 +6371,6 @@ found 1 charmaps
 * fontdescriptor[0xbf].yMax     = 31;
 * fontdescriptor[0xbf].offset   = 0x439a;
 * fontdescriptor[0xbf].xAdvance = 24;
-* fontdescriptor[0xbf].yadvance = 36;
 * fontdescriptor[0xbf].unicode  = U-00bf;
 ************************************************
 *
@@ -6556,7 +6428,6 @@ found 1 charmaps
 * fontdescriptor[0xc0].yMax     = 53;
 * fontdescriptor[0xc0].offset   = 0x4418;
 * fontdescriptor[0xc0].xAdvance = 32;
-* fontdescriptor[0xc0].yadvance = 36;
 * fontdescriptor[0xc0].unicode  = U-00c0;
 ************************************************
 *
@@ -6625,7 +6496,6 @@ found 1 charmaps
 * fontdescriptor[0xc1].yMax     = 53;
 * fontdescriptor[0xc1].offset   = 0x4521;
 * fontdescriptor[0xc1].xAdvance = 32;
-* fontdescriptor[0xc1].yadvance = 36;
 * fontdescriptor[0xc1].unicode  = U-00c1;
 ************************************************
 *
@@ -6694,7 +6564,6 @@ found 1 charmaps
 * fontdescriptor[0xc2].yMax     = 53;
 * fontdescriptor[0xc2].offset   = 0x462a;
 * fontdescriptor[0xc2].xAdvance = 32;
-* fontdescriptor[0xc2].yadvance = 36;
 * fontdescriptor[0xc2].unicode  = U-00c2;
 ************************************************
 *
@@ -6763,7 +6632,6 @@ found 1 charmaps
 * fontdescriptor[0xc3].yMax     = 51;
 * fontdescriptor[0xc3].offset   = 0x4733;
 * fontdescriptor[0xc3].xAdvance = 32;
-* fontdescriptor[0xc3].yadvance = 36;
 * fontdescriptor[0xc3].unicode  = U-00c3;
 ************************************************
 *
@@ -6830,7 +6698,6 @@ found 1 charmaps
 * fontdescriptor[0xc4].yMax     = 50;
 * fontdescriptor[0xc4].offset   = 0x4832;
 * fontdescriptor[0xc4].xAdvance = 32;
-* fontdescriptor[0xc4].yadvance = 36;
 * fontdescriptor[0xc4].unicode  = U-00c4;
 ************************************************
 *
@@ -6896,7 +6763,6 @@ found 1 charmaps
 * fontdescriptor[0xc5].yMax     = 51;
 * fontdescriptor[0xc5].offset   = 0x492c;
 * fontdescriptor[0xc5].xAdvance = 32;
-* fontdescriptor[0xc5].yadvance = 36;
 * fontdescriptor[0xc5].unicode  = U-00c5;
 ************************************************
 *
@@ -6963,7 +6829,6 @@ found 1 charmaps
 * fontdescriptor[0xc6].yMax     = 41;
 * fontdescriptor[0xc6].offset   = 0x4a2b;
 * fontdescriptor[0xc6].xAdvance = 47;
-* fontdescriptor[0xc6].yadvance = 36;
 * fontdescriptor[0xc6].unicode  = U-00c6;
 ************************************************
 *
@@ -7020,7 +6885,6 @@ found 1 charmaps
 * fontdescriptor[0xc7].yMax     = 41;
 * fontdescriptor[0xc7].offset   = 0x4b4a;
 * fontdescriptor[0xc7].xAdvance = 33;
-* fontdescriptor[0xc7].yadvance = 36;
 * fontdescriptor[0xc7].unicode  = U-00c7;
 ************************************************
 *
@@ -7091,7 +6955,6 @@ found 1 charmaps
 * fontdescriptor[0xc8].yMax     = 53;
 * fontdescriptor[0xc8].offset   = 0x4c26;
 * fontdescriptor[0xc8].xAdvance = 29;
-* fontdescriptor[0xc8].yadvance = 36;
 * fontdescriptor[0xc8].unicode  = U-00c8;
 ************************************************
 *
@@ -7160,7 +7023,6 @@ found 1 charmaps
 * fontdescriptor[0xc9].yMax     = 53;
 * fontdescriptor[0xc9].offset   = 0x4cfa;
 * fontdescriptor[0xc9].xAdvance = 29;
-* fontdescriptor[0xc9].yadvance = 36;
 * fontdescriptor[0xc9].unicode  = U-00c9;
 ************************************************
 *
@@ -7229,7 +7091,6 @@ found 1 charmaps
 * fontdescriptor[0xca].yMax     = 53;
 * fontdescriptor[0xca].offset   = 0x4dce;
 * fontdescriptor[0xca].xAdvance = 29;
-* fontdescriptor[0xca].yadvance = 36;
 * fontdescriptor[0xca].unicode  = U-00ca;
 ************************************************
 *
@@ -7298,7 +7159,6 @@ found 1 charmaps
 * fontdescriptor[0xcb].yMax     = 50;
 * fontdescriptor[0xcb].offset   = 0x4ea2;
 * fontdescriptor[0xcb].xAdvance = 29;
-* fontdescriptor[0xcb].yadvance = 36;
 * fontdescriptor[0xcb].unicode  = U-00cb;
 ************************************************
 *
@@ -7364,7 +7224,6 @@ found 1 charmaps
 * fontdescriptor[0xcc].yMax     = 53;
 * fontdescriptor[0xcc].offset   = 0x4f6a;
 * fontdescriptor[0xcc].xAdvance = 16;
-* fontdescriptor[0xcc].yadvance = 36;
 * fontdescriptor[0xcc].unicode  = U-00cc;
 ************************************************
 *
@@ -7433,7 +7292,6 @@ found 1 charmaps
 * fontdescriptor[0xcd].yMax     = 53;
 * fontdescriptor[0xcd].offset   = 0x4fd4;
 * fontdescriptor[0xcd].xAdvance = 16;
-* fontdescriptor[0xcd].yadvance = 36;
 * fontdescriptor[0xcd].unicode  = U-00cd;
 ************************************************
 *
@@ -7502,7 +7360,6 @@ found 1 charmaps
 * fontdescriptor[0xce].yMax     = 53;
 * fontdescriptor[0xce].offset   = 0x5073;
 * fontdescriptor[0xce].xAdvance = 16;
-* fontdescriptor[0xce].yadvance = 36;
 * fontdescriptor[0xce].unicode  = U-00ce;
 ************************************************
 *
@@ -7571,7 +7428,6 @@ found 1 charmaps
 * fontdescriptor[0xcf].yMax     = 50;
 * fontdescriptor[0xcf].offset   = 0x5112;
 * fontdescriptor[0xcf].xAdvance = 16;
-* fontdescriptor[0xcf].yadvance = 36;
 * fontdescriptor[0xcf].unicode  = U-00cf;
 ************************************************
 *
@@ -7637,7 +7493,6 @@ found 1 charmaps
 * fontdescriptor[0xd0].yMax     = 41;
 * fontdescriptor[0xd0].offset   = 0x51a8;
 * fontdescriptor[0xd0].xAdvance = 38;
-* fontdescriptor[0xd0].yadvance = 36;
 * fontdescriptor[0xd0].unicode  = U-00d0;
 ************************************************
 *
@@ -7694,7 +7549,6 @@ found 1 charmaps
 * fontdescriptor[0xd1].yMax     = 51;
 * fontdescriptor[0xd1].offset   = 0x5275;
 * fontdescriptor[0xd1].xAdvance = 40;
-* fontdescriptor[0xd1].yadvance = 36;
 * fontdescriptor[0xd1].unicode  = U-00d1;
 ************************************************
 *
@@ -7761,7 +7615,6 @@ found 1 charmaps
 * fontdescriptor[0xd2].yMax     = 53;
 * fontdescriptor[0xd2].offset   = 0x5374;
 * fontdescriptor[0xd2].xAdvance = 41;
-* fontdescriptor[0xd2].yadvance = 36;
 * fontdescriptor[0xd2].unicode  = U-00d2;
 ************************************************
 *
@@ -7831,7 +7684,6 @@ found 1 charmaps
 * fontdescriptor[0xd3].yMax     = 53;
 * fontdescriptor[0xd3].offset   = 0x5482;
 * fontdescriptor[0xd3].xAdvance = 41;
-* fontdescriptor[0xd3].yadvance = 36;
 * fontdescriptor[0xd3].unicode  = U-00d3;
 ************************************************
 *
@@ -7901,7 +7753,6 @@ found 1 charmaps
 * fontdescriptor[0xd4].yMax     = 53;
 * fontdescriptor[0xd4].offset   = 0x5590;
 * fontdescriptor[0xd4].xAdvance = 41;
-* fontdescriptor[0xd4].yadvance = 36;
 * fontdescriptor[0xd4].unicode  = U-00d4;
 ************************************************
 *
@@ -7971,7 +7822,6 @@ found 1 charmaps
 * fontdescriptor[0xd5].yMax     = 51;
 * fontdescriptor[0xd5].offset   = 0x569e;
 * fontdescriptor[0xd5].xAdvance = 41;
-* fontdescriptor[0xd5].yadvance = 36;
 * fontdescriptor[0xd5].unicode  = U-00d5;
 ************************************************
 *
@@ -8039,7 +7889,6 @@ found 1 charmaps
 * fontdescriptor[0xd6].yMax     = 50;
 * fontdescriptor[0xd6].offset   = 0x57a2;
 * fontdescriptor[0xd6].xAdvance = 41;
-* fontdescriptor[0xd6].yadvance = 36;
 * fontdescriptor[0xd6].unicode  = U-00d6;
 ************************************************
 *
@@ -8106,7 +7955,6 @@ found 1 charmaps
 * fontdescriptor[0xd7].yMax     = 32;
 * fontdescriptor[0xd7].offset   = 0x58a1;
 * fontdescriptor[0xd7].xAdvance = 31;
-* fontdescriptor[0xd7].yadvance = 36;
 * fontdescriptor[0xd7].unicode  = U-00d7;
 ************************************************
 *
@@ -8146,7 +7994,6 @@ found 1 charmaps
 * fontdescriptor[0xd8].yMax     = 43;
 * fontdescriptor[0xd8].offset   = 0x5901;
 * fontdescriptor[0xd8].xAdvance = 41;
-* fontdescriptor[0xd8].yadvance = 36;
 * fontdescriptor[0xd8].unicode  = U-00d8;
 ************************************************
 *
@@ -8208,7 +8055,6 @@ found 1 charmaps
 * fontdescriptor[0xd9].yMax     = 53;
 * fontdescriptor[0xd9].offset   = 0x59e7;
 * fontdescriptor[0xd9].xAdvance = 39;
-* fontdescriptor[0xd9].yadvance = 36;
 * fontdescriptor[0xd9].unicode  = U-00d9;
 ************************************************
 *
@@ -8278,7 +8124,6 @@ found 1 charmaps
 * fontdescriptor[0xda].yMax     = 53;
 * fontdescriptor[0xda].offset   = 0x5af5;
 * fontdescriptor[0xda].xAdvance = 39;
-* fontdescriptor[0xda].yadvance = 36;
 * fontdescriptor[0xda].unicode  = U-00da;
 ************************************************
 *
@@ -8348,7 +8193,6 @@ found 1 charmaps
 * fontdescriptor[0xdb].yMax     = 53;
 * fontdescriptor[0xdb].offset   = 0x5c03;
 * fontdescriptor[0xdb].xAdvance = 39;
-* fontdescriptor[0xdb].yadvance = 36;
 * fontdescriptor[0xdb].unicode  = U-00db;
 ************************************************
 *
@@ -8418,7 +8262,6 @@ found 1 charmaps
 * fontdescriptor[0xdc].yMax     = 50;
 * fontdescriptor[0xdc].offset   = 0x5d11;
 * fontdescriptor[0xdc].xAdvance = 39;
-* fontdescriptor[0xdc].yadvance = 36;
 * fontdescriptor[0xdc].unicode  = U-00dc;
 ************************************************
 *
@@ -8485,7 +8328,6 @@ found 1 charmaps
 * fontdescriptor[0xdd].yMax     = 53;
 * fontdescriptor[0xdd].offset   = 0x5e10;
 * fontdescriptor[0xdd].xAdvance = 29;
-* fontdescriptor[0xdd].yadvance = 36;
 * fontdescriptor[0xdd].unicode  = U-00dd;
 ************************************************
 *
@@ -8554,7 +8396,6 @@ found 1 charmaps
 * fontdescriptor[0xde].yMax     = 41;
 * fontdescriptor[0xde].offset   = 0x5ee4;
 * fontdescriptor[0xde].xAdvance = 32;
-* fontdescriptor[0xde].yadvance = 36;
 * fontdescriptor[0xde].unicode  = U-00de;
 ************************************************
 *
@@ -8611,7 +8452,6 @@ found 1 charmaps
 * fontdescriptor[0xdf].yMax     = 43;
 * fontdescriptor[0xdf].offset   = 0x5f88;
 * fontdescriptor[0xdf].xAdvance = 33;
-* fontdescriptor[0xdf].yadvance = 36;
 * fontdescriptor[0xdf].unicode  = U-00df;
 ************************************************
 *
@@ -8684,7 +8524,6 @@ found 1 charmaps
 * fontdescriptor[0xe0].yMax     = 44;
 * fontdescriptor[0xe0].offset   = 0x60a5;
 * fontdescriptor[0xe0].xAdvance = 32;
-* fontdescriptor[0xe0].yadvance = 36;
 * fontdescriptor[0xe0].unicode  = U-00e0;
 ************************************************
 *
@@ -8745,7 +8584,6 @@ found 1 charmaps
 * fontdescriptor[0xe1].yMax     = 44;
 * fontdescriptor[0xe1].offset   = 0x6159;
 * fontdescriptor[0xe1].xAdvance = 32;
-* fontdescriptor[0xe1].yadvance = 36;
 * fontdescriptor[0xe1].unicode  = U-00e1;
 ************************************************
 *
@@ -8806,7 +8644,6 @@ found 1 charmaps
 * fontdescriptor[0xe2].yMax     = 44;
 * fontdescriptor[0xe2].offset   = 0x620d;
 * fontdescriptor[0xe2].xAdvance = 32;
-* fontdescriptor[0xe2].yadvance = 36;
 * fontdescriptor[0xe2].unicode  = U-00e2;
 ************************************************
 *
@@ -8867,7 +8704,6 @@ found 1 charmaps
 * fontdescriptor[0xe3].yMax     = 42;
 * fontdescriptor[0xe3].offset   = 0x62c1;
 * fontdescriptor[0xe3].xAdvance = 32;
-* fontdescriptor[0xe3].yadvance = 36;
 * fontdescriptor[0xe3].unicode  = U-00e3;
 ************************************************
 *
@@ -8926,7 +8762,6 @@ found 1 charmaps
 * fontdescriptor[0xe4].yMax     = 41;
 * fontdescriptor[0xe4].offset   = 0x636d;
 * fontdescriptor[0xe4].xAdvance = 32;
-* fontdescriptor[0xe4].yadvance = 36;
 * fontdescriptor[0xe4].unicode  = U-00e4;
 ************************************************
 *
@@ -8984,7 +8819,6 @@ found 1 charmaps
 * fontdescriptor[0xe5].yMax     = 47;
 * fontdescriptor[0xe5].offset   = 0x6415;
 * fontdescriptor[0xe5].xAdvance = 32;
-* fontdescriptor[0xe5].yadvance = 36;
 * fontdescriptor[0xe5].unicode  = U-00e5;
 ************************************************
 *
@@ -9048,7 +8882,6 @@ found 1 charmaps
 * fontdescriptor[0xe6].yMax     = 31;
 * fontdescriptor[0xe6].offset   = 0x64d5;
 * fontdescriptor[0xe6].xAdvance = 46;
-* fontdescriptor[0xe6].yadvance = 36;
 * fontdescriptor[0xe6].unicode  = U-00e6;
 ************************************************
 *
@@ -9096,7 +8929,6 @@ found 1 charmaps
 * fontdescriptor[0xe7].yMax     = 31;
 * fontdescriptor[0xe7].offset   = 0x6595;
 * fontdescriptor[0xe7].xAdvance = 26;
-* fontdescriptor[0xe7].yadvance = 36;
 * fontdescriptor[0xe7].unicode  = U-00e7;
 ************************************************
 *
@@ -9157,7 +8989,6 @@ found 1 charmaps
 * fontdescriptor[0xe8].yMax     = 44;
 * fontdescriptor[0xe8].offset   = 0x6649;
 * fontdescriptor[0xe8].xAdvance = 28;
-* fontdescriptor[0xe8].yadvance = 36;
 * fontdescriptor[0xe8].unicode  = U-00e8;
 ************************************************
 *
@@ -9218,7 +9049,6 @@ found 1 charmaps
 * fontdescriptor[0xe9].yMax     = 44;
 * fontdescriptor[0xe9].offset   = 0x66fd;
 * fontdescriptor[0xe9].xAdvance = 28;
-* fontdescriptor[0xe9].yadvance = 36;
 * fontdescriptor[0xe9].unicode  = U-00e9;
 ************************************************
 *
@@ -9279,7 +9109,6 @@ found 1 charmaps
 * fontdescriptor[0xea].yMax     = 44;
 * fontdescriptor[0xea].offset   = 0x67b1;
 * fontdescriptor[0xea].xAdvance = 28;
-* fontdescriptor[0xea].yadvance = 36;
 * fontdescriptor[0xea].unicode  = U-00ea;
 ************************************************
 *
@@ -9340,7 +9169,6 @@ found 1 charmaps
 * fontdescriptor[0xeb].yMax     = 41;
 * fontdescriptor[0xeb].offset   = 0x6865;
 * fontdescriptor[0xeb].xAdvance = 28;
-* fontdescriptor[0xeb].yadvance = 36;
 * fontdescriptor[0xeb].unicode  = U-00eb;
 ************************************************
 *
@@ -9398,7 +9226,6 @@ found 1 charmaps
 * fontdescriptor[0xec].yMax     = 44;
 * fontdescriptor[0xec].offset   = 0x690d;
 * fontdescriptor[0xec].xAdvance = 14;
-* fontdescriptor[0xec].yadvance = 36;
 * fontdescriptor[0xec].unicode  = U-00ec;
 ************************************************
 *
@@ -9458,7 +9285,6 @@ found 1 charmaps
 * fontdescriptor[0xed].yMax     = 44;
 * fontdescriptor[0xed].offset   = 0x6965;
 * fontdescriptor[0xed].xAdvance = 14;
-* fontdescriptor[0xed].yadvance = 36;
 * fontdescriptor[0xed].unicode  = U-00ed;
 ************************************************
 *
@@ -9518,7 +9344,6 @@ found 1 charmaps
 * fontdescriptor[0xee].yMax     = 44;
 * fontdescriptor[0xee].offset   = 0x69e9;
 * fontdescriptor[0xee].xAdvance = 14;
-* fontdescriptor[0xee].yadvance = 36;
 * fontdescriptor[0xee].unicode  = U-00ee;
 ************************************************
 *
@@ -9578,7 +9403,6 @@ found 1 charmaps
 * fontdescriptor[0xef].yMax     = 41;
 * fontdescriptor[0xef].offset   = 0x6a6d;
 * fontdescriptor[0xef].xAdvance = 14;
-* fontdescriptor[0xef].yadvance = 36;
 * fontdescriptor[0xef].unicode  = U-00ef;
 ************************************************
 *
@@ -9635,7 +9459,6 @@ found 1 charmaps
 * fontdescriptor[0xf0].yMax     = 44;
 * fontdescriptor[0xf0].offset   = 0x6ae8;
 * fontdescriptor[0xf0].xAdvance = 32;
-* fontdescriptor[0xf0].yadvance = 36;
 * fontdescriptor[0xf0].unicode  = U-00f0;
 ************************************************
 *
@@ -9696,7 +9519,6 @@ found 1 charmaps
 * fontdescriptor[0xf1].yMax     = 42;
 * fontdescriptor[0xf1].offset   = 0x6b9c;
 * fontdescriptor[0xf1].xAdvance = 33;
-* fontdescriptor[0xf1].yadvance = 36;
 * fontdescriptor[0xf1].unicode  = U-00f1;
 ************************************************
 *
@@ -9754,7 +9576,6 @@ found 1 charmaps
 * fontdescriptor[0xf2].yMax     = 44;
 * fontdescriptor[0xf2].offset   = 0x6c44;
 * fontdescriptor[0xf2].xAdvance = 32;
-* fontdescriptor[0xf2].yadvance = 36;
 * fontdescriptor[0xf2].unicode  = U-00f2;
 ************************************************
 *
@@ -9814,7 +9635,6 @@ found 1 charmaps
 * fontdescriptor[0xf3].yMax     = 44;
 * fontdescriptor[0xf3].offset   = 0x6cf4;
 * fontdescriptor[0xf3].xAdvance = 32;
-* fontdescriptor[0xf3].yadvance = 36;
 * fontdescriptor[0xf3].unicode  = U-00f3;
 ************************************************
 *
@@ -9874,7 +9694,6 @@ found 1 charmaps
 * fontdescriptor[0xf4].yMax     = 44;
 * fontdescriptor[0xf4].offset   = 0x6da4;
 * fontdescriptor[0xf4].xAdvance = 32;
-* fontdescriptor[0xf4].yadvance = 36;
 * fontdescriptor[0xf4].unicode  = U-00f4;
 ************************************************
 *
@@ -9934,7 +9753,6 @@ found 1 charmaps
 * fontdescriptor[0xf5].yMax     = 42;
 * fontdescriptor[0xf5].offset   = 0x6e54;
 * fontdescriptor[0xf5].xAdvance = 32;
-* fontdescriptor[0xf5].yadvance = 36;
 * fontdescriptor[0xf5].unicode  = U-00f5;
 ************************************************
 *
@@ -9992,7 +9810,6 @@ found 1 charmaps
 * fontdescriptor[0xf6].yMax     = 41;
 * fontdescriptor[0xf6].offset   = 0x6efc;
 * fontdescriptor[0xf6].xAdvance = 32;
-* fontdescriptor[0xf6].yadvance = 36;
 * fontdescriptor[0xf6].unicode  = U-00f6;
 ************************************************
 *
@@ -10049,7 +9866,6 @@ found 1 charmaps
 * fontdescriptor[0xf7].yMax     = 33;
 * fontdescriptor[0xf7].offset   = 0x6fa0;
 * fontdescriptor[0xf7].xAdvance = 31;
-* fontdescriptor[0xf7].yadvance = 36;
 * fontdescriptor[0xf7].unicode  = U-00f7;
 ************************************************
 *
@@ -10091,7 +9907,6 @@ found 1 charmaps
 * fontdescriptor[0xf8].yMax     = 33;
 * fontdescriptor[0xf8].offset   = 0x7008;
 * fontdescriptor[0xf8].xAdvance = 32;
-* fontdescriptor[0xf8].yadvance = 36;
 * fontdescriptor[0xf8].unicode  = U-00f8;
 ************************************************
 *
@@ -10142,7 +9957,6 @@ found 1 charmaps
 * fontdescriptor[0xf9].yMax     = 44;
 * fontdescriptor[0xf9].offset   = 0x7094;
 * fontdescriptor[0xf9].xAdvance = 33;
-* fontdescriptor[0xf9].yadvance = 36;
 * fontdescriptor[0xf9].unicode  = U-00f9;
 ************************************************
 *
@@ -10203,7 +10017,6 @@ found 1 charmaps
 * fontdescriptor[0xfa].yMax     = 44;
 * fontdescriptor[0xfa].offset   = 0x7148;
 * fontdescriptor[0xfa].xAdvance = 33;
-* fontdescriptor[0xfa].yadvance = 36;
 * fontdescriptor[0xfa].unicode  = U-00fa;
 ************************************************
 *
@@ -10264,7 +10077,6 @@ found 1 charmaps
 * fontdescriptor[0xfb].yMax     = 44;
 * fontdescriptor[0xfb].offset   = 0x71fc;
 * fontdescriptor[0xfb].xAdvance = 33;
-* fontdescriptor[0xfb].yadvance = 36;
 * fontdescriptor[0xfb].unicode  = U-00fb;
 ************************************************
 *
@@ -10325,7 +10137,6 @@ found 1 charmaps
 * fontdescriptor[0xfc].yMax     = 41;
 * fontdescriptor[0xfc].offset   = 0x72b0;
 * fontdescriptor[0xfc].xAdvance = 33;
-* fontdescriptor[0xfc].yadvance = 36;
 * fontdescriptor[0xfc].unicode  = U-00fc;
 ************************************************
 *
@@ -10383,7 +10194,6 @@ found 1 charmaps
 * fontdescriptor[0xfd].yMax     = 44;
 * fontdescriptor[0xfd].offset   = 0x7358;
 * fontdescriptor[0xfd].xAdvance = 26;
-* fontdescriptor[0xfd].yadvance = 36;
 * fontdescriptor[0xfd].unicode  = U-00fd;
 ************************************************
 *
@@ -10457,7 +10267,6 @@ found 1 charmaps
 * fontdescriptor[0xfe].yMax     = 43;
 * fontdescriptor[0xfe].offset   = 0x747a;
 * fontdescriptor[0xfe].xAdvance = 33;
-* fontdescriptor[0xfe].yadvance = 36;
 * fontdescriptor[0xfe].unicode  = U-00fe;
 ************************************************
 *
@@ -10530,7 +10339,6 @@ found 1 charmaps
 * fontdescriptor[0xff].yMax     = 41;
 * fontdescriptor[0xff].offset   = 0x7597;
 * fontdescriptor[0xff].xAdvance = 26;
-* fontdescriptor[0xff].yadvance = 36;
 * fontdescriptor[0xff].unicode  = U-00ff;
 ************************************************
 *
