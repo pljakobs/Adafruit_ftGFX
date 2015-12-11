@@ -494,9 +494,8 @@ uint8_t Adafruit_GFX::getCharHeight(){
 size_t Adafruit_GFX::write(uint8_t c) {
   
   if (c == 0x0a || c == 0x0c) {
-    cursor_y += fontProp->height;	//all chars are same height so use height of space char
+    cursor_y += fontProp->height;
     cursor_x  = 0;
-	Serial.print("cr/lf\n");
   } else {
     drawFastChar(cursor_x, cursor_y, c, textcolor, textbgcolor, textsize); 				// draw character "c"
 
@@ -611,8 +610,6 @@ void Adafruit_GFX::drawChar(int16_t x, int16_t y, unsigned char c,
 	FontDescriptor ft_fd;
   fontProperties ft_fp;
 
-	//Serial.printf("==================================\nAdafruit_ftGFX::drawChar(0x%02x)=%c\n",c,c);
-	
 	ft_fd.xMin = pgm_read_byte(&fontDesc[c-0x20].xMin);
 	ft_fd.xMax = pgm_read_byte(&fontDesc[c-0x20].xMax);
 	ft_fd.yMin = pgm_read_byte(&fontDesc[c-0x20].yMin);
@@ -628,64 +625,22 @@ void Adafruit_GFX::drawChar(int16_t x, int16_t y, unsigned char c,
   ft_fp.underline_position = fontProp->underline_position+1;
   ft_fp.underline_thickness= fontProp->underline_thickness;
   ft_fp.flags              = fontProp->flags;
- 
-	Serial.printf("ft_fd{\n");
-	Serial.printf("	xMin %d\n", ft_fd.xMin);
-	Serial.printf("	xMax %d\n", ft_fd.xMax);
-	Serial.printf("	yMin %d\n", ft_fd.yMin);
-	Serial.printf("	yMax %d}\n", ft_fd.yMax);
 
-  Serial.printf("ft_fp{\n");
-  Serial.printf(" height %d\n", ft_fp.height);
-  Serial.printf(" ascender %d\n", ft_fp.ascender);
-  Serial.printf(" descender %d\n", ft_fp.descender);
-  Serial.printf(" underline_position %d\n", ft_fp.underline_position);
-  Serial.printf(" underline_thickness %d\n", ft_fp.underline_thickness);
-  Serial.printf(" flags %d}\n", ft_fp.flags);
-  
 	ft_height  = ft_fd.yMax-ft_fd.yMin; 				// FontHeight
 	ft_width   = ft_fd.xMax-ft_fd.xMin;					// FontWidth
 	ft_offset  = ft_fd.offset;
-/*
-  fillRect(x            ,y-ft_fp.ascender  ,ft_fd.xAdvance ,ft_fp.height , bg);
-  drawRect(x            ,y-ft_fp.ascender  ,ft_fd.xAdvance ,ft_fp.height , 0xffff);
-	for(uint8_t i=0; i<ft_height;i++){
-		(ft_width%8)?ft_byte_count=(ft_width >> 3)+1:ft_byte_count=ft_width >> 3; 
-		//Serial.printf("	byte_count: 0x%02x\n", ft_byte_count);
-		for(uint8_t j=0; j<ft_byte_count;j++){
-			uint8_t bitline=pgm_read_byte(fontData+ft_offset++);
-			//Serial.printf("bitline: 0x%02x, ",bitline);
-			for(uint8_t k=7;k>=0 && k<8;k--){
-				(bitline & 1<<k)?drawPixel(x+ft_fd.xMin+(j+1)*8-k,y-ft_fd.yMax+i,color):drawPixel(x+ft_fd.xMin+(j+1)*8-k,y-ft_fd.yMax+i,bg);
-				//(bitline & (1<<k))?Serial.printf("@"):Serial.printf(".");
-			}
-		}
-		//Serial.printf("\n");
-	}
-  Serial.print("====================\n");
-  //Serial.printf("x: %d\ny: %d\nw: %d\nh: %d\n", x, y-ft_fd.yAdvance-ft_fd.yMin, ft_fd.xAdvance, ft_fd.yAdvance);
-  drawRect(x            ,y-ft_fp.ascender  ,ft_fd.xAdvance ,ft_fp.height , 0xffff);
-  */
+
   y+=ft_fp.ascender;
-  fillRect(x            ,y-ft_fp.ascender ,ft_fd.xAdvance ,ft_fp.height , bg);
-  //drawRect(x            ,y-ft_fp.ascender ,ft_fd.xAdvance ,ft_fp.height , 0xff00);
+  if(color!=bg) fillRect(x            ,y-ft_fp.ascender ,ft_fd.xAdvance ,ft_fp.height , bg);
 	for(uint8_t i=0; i<ft_height;i++){
 		(ft_width%8)?ft_byte_count=(ft_width >> 3)+1:ft_byte_count=ft_width >> 3; 
-		//Serial.printf("	byte_count: 0x%02x\n", ft_byte_count);
 		for(uint8_t j=0; j<ft_byte_count;j++){
 			uint8_t bitline=pgm_read_byte(fontData+ft_offset++);
-			//Serial.printf("bitline: 0x%02x, ",bitline);
 			for(uint8_t k=7;k>=0 && k<8;k--){
 				if(bitline & 1<<k)drawPixel(x+ft_fd.xMin+(j+1)*8-k,y-ft_fd.yMax+i,color);
-				//(bitline & (1<<k))?Serial.printf("@"):Serial.printf(".");
 			}
 		}
-		//Serial.printf("\n");
 	}
-  Serial.print("====================\n");
-  //Serial.printf("x: %d\ny: %d\nw: %d\nh: %d\n", x, y-ft_fd.yAdvance-ft_fd.yMin, ft_fd.xAdvance, ft_fd.yAdvance);
-  //drawRect(x            ,y-ft_fp.ascender ,ft_fd.xAdvance ,ft_fp.height , 0xff00);
-
 }
 
 void Adafruit_GFX::setCursor(int16_t x, int16_t y) {
