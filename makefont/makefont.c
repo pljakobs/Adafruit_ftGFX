@@ -21,34 +21,55 @@ void beautify(char s[]){
   fprintf(stderr,"%s",s);
 }
 
+int strcicmp(char const *a, char const *b)
+{
+    for (;; a++, b++) {
+        int d = tolower(*a) - tolower(*b);
+        if (d != 0 || !*a)
+            return d;
+    }
+}
+
 int main( int argc, char** argv )
 {
  
+  FontProperties fontProperties;
   FontDescriptor fontdescriptor[256];
-  FT_Library    library;
-  FT_Face       face;
-  FT_CharMap    xcm; 
-  FT_Glyph      glyph;
-  FT_GlyphSlot  slot;
-  FT_Matrix     matrix;                 /* transformation matrix */
-  FT_Vector     pen;                    /* untransformed origin  */
-  FT_Error      error;
-  FT_CharMap    charmap;
-  FT_BBox       bbox;
+  FT_Library     library;
+  FT_Face        face;
+  FT_CharMap     xcm; 
+  FT_Glyph       glyph;
+  FT_GlyphSlot   slot;
+  FT_Matrix      matrix;                 /* transformation matrix */
+  FT_Vector      pen;                    /* untransformed origin  */
+  FT_Error       error;
+  FT_CharMap     charmap;
+  FT_BBox        bbox;
 
-  FILE*         file;
-  FILE*         textfile;
+  FILE*          file;
+  FILE*          textfile;
 
-  char*         filename;
-  char*         text;
-  char          pixbuff[256];
+  char*          filename;
+  char*          text;
+  char           pixbuff[256];
 
-  int           c,glyph_index;
-  int           target_height;
-  int           n, num_chars;
-  int           i,j,p,q,offset;
-  int           size;
-  int           dpi=114;
+  int            c,glyph_index;
+  int            target_height;
+  int            n, num_chars;
+  int            i,j,p,q,offset;
+
+  int            size;
+  
+  /*
+   * change the following two values to suit your needs. 
+   * The dpi value of your display will make sure that same size
+   * fonts will render roughly same physical heigt on different 
+   * resolution displays
+   * the ft_threshhold configures the greyscale->b/w conversion
+   */
+
+  int            dpi=114;
+  uint8_t        ft_threshhold=127;
 
   if ( argc != 3 )
   {
@@ -90,7 +111,15 @@ int main( int argc, char** argv )
   fprintf(stderr,"opened %s\n", family_name);
   fprintf(stderr,"       %s\n", style_name);
   fprintf(stderr,"number Glyphs %d\n", face->num_glyphs);
+
+  strncpy(fontProperties.family, family_name,32);
+  strncpy(fontProperties.style, style_name,32);
   
+  if(strcicmp(fontProperties.style, "bold")==0) fontProperties.flags|FF_Bold;
+  if(strcicmp(fontProperties.style, "italic")==0) fontProperties.flags|FF_Italic;
+  if(strcicmp(fontProperties.style, "oblique")==0) fontProperties.flags|FF_Italic;
+  if(strcicmp(fontProperties.style, "regular")==0) fontProperties.flags|FF_Regular;
+
   //create output filename and open file
   char* filename_o=malloc(snprintf(NULL,0,"%s_%s_%dpt.c", face->family_name, face->style_name, size)+1);
   sprintf(filename_o,"%s_%s_%dpt.h", face->family_name, face->style_name, size);
@@ -131,16 +160,28 @@ int main( int argc, char** argv )
   int cm = face->num_charmaps;
   fprintf(textfile,"found %d charmaps\n", cm);
   
-  FT_Set_Char_Size(face, size*64,0,dpi,0);
-  fprintf(file,"const unsigned char %s_%s_%dptBitmaps[] PROGMEM = {\n", face->family_name, face->style_name, size);
+  FT_Set_Char_Size(face, size<<6,0,dpi,0);
+
+  fontProperties.height=face->size->metrics.height>>6;
+  fontProperties.ascender=face->size->metrics.ascender>>6;
+  fontProperties.descender=face->size->metrics.descender>>6;
+  fontProperties.underline_position=face->underline_position>>6;
+  fontProperties.underline_thickness=face->underline_thickness>>6;
+
+  fprintf(textfile,"const fontProperties %s_%s_%dptProperties = {",face->family_name, face->style_name, size);
+  fprintf(textfile,"\t(uint8_t)height\t%d,\n\t(uint8_t)ascender\t%d,\n\t(int8_t)descender\t%d,\n\t(int8_t)uline_pos\t%d,\n\t(uint8_t)uline_width%d,\n\t(uint16_t)flags\t0x%04x,\n\tname\t\"%s\",\n\tstyle\t\"%s\"};\n",fontProperties.height, fontProperties.ascender, fontProperties.descender, fontProperties.underline_position, fontProperties.underline_thickness, fontProperties.flags, fontProperties.family,fontProperties.style);
+
+
+  fprintf(file,"const fontProperties %s_%s_%dptProperties = {",face->family_name, face->style_name, size);
+  fprintf(file,"(uint8_t)0x%02x, (uint8_t)0x%02x, (int8_t)0x%02x, (int8_t)0x%02x, (uint8_t)0x%02x, (uint16_t)0x%04x, \"%s\", \"%s\"};\n",fontProperties.height, fontProperties.ascender, fontProperties.descender, fontProperties.underline_position, fontProperties.underline_thickness, fontProperties.flags, fontProperties.family,fontProperties.style);
+
+  fprintf(stderr,"const fontProperties %s_%s_%dptProperties = {",face->family_name, face->style_name, size);
+  fprintf(stderr,"\t(uint8_t)height\t%d,\n\t(uint8_t)ascender\t%d,\n\t(int8_t)descender\t%d,\n\t(int8_t)uline_pos\t%d,\n\t(uint8_t)uline_width%d,\n\t(uint16_t)flags\t0x%04x,\n\tname\t\"%s\",\n\tstyle\t\"%s\"};\n",fontProperties.height, fontProperties.ascender, fontProperties.descender, fontProperties.underline_position, fontProperties.underline_thickness, fontProperties.flags, fontProperties.family,fontProperties.style);
+
+ fprintf(file,"const unsigned char %s_%s_%dptBitmaps[] PROGMEM = {\n",face->family_name, face->style_name, size);
  
   offset=0;
   uint8_t ft_minchar=0x20;
-<<<<<<< HEAD
-  uint8_t ft_threshhold=127;
-=======
-  uint8_t ft_threshhold=192;
->>>>>>> 69071550692bbab9f7e36d0c8d49ca87892136bf
   for(c=ft_minchar;c<=255;c++){
     if(FF_encoding[c]){
       error=FT_Load_Char(face, FF_encoding[c], FT_LOAD_RENDER);
@@ -168,11 +209,7 @@ int main( int argc, char** argv )
       fontdescriptor[c].yMin     = bbox.yMin;
       fontdescriptor[c].yMax     = bbox.yMax;
       fontdescriptor[c].offset   = offset;
-      fontdescriptor[c].xAdvance = slot->advance.x/64;
-      fontdescriptor[c].yAdvance = size;
-      //fontdescriptor[c].yAdvance = slot->advance.y/64;
-      //fontdescriptor[c].xAdvance = face->glyph->linearHoriAdvance/64;
-      //fontdescriptor[c].yAdvance = face->glyph->linearVertAdvance/64;
+      fontdescriptor[c].xAdvance = slot->advance.x>>6;
       fontdescriptor[c].unicode  = FF_encoding[c];
 
       int doc_yMax  = bbox.yMax;
@@ -191,7 +228,6 @@ int main( int argc, char** argv )
 
       fprintf(textfile,"* fontdescriptor[0x%02x].offset   = 0x%04x;\n", c, fontdescriptor[c].offset); 
       fprintf(textfile,"* fontdescriptor[0x%02x].xAdvance = %d;\n", c, fontdescriptor[c].xAdvance); 
-      fprintf(textfile,"* fontdescriptor[0x%02x].yadvance = %d;\n", c, fontdescriptor[c].yAdvance); 
       fprintf(textfile,"* fontdescriptor[0x%02x].unicode  = U-%04x;\n", c, fontdescriptor[c].unicode); 
 
       fprintf(textfile,"************************************************\n*\n");
@@ -233,7 +269,6 @@ int main( int argc, char** argv )
       fontdescriptor[c].yMin=0;
       fontdescriptor[c].yMax=0;
       fontdescriptor[c].xAdvance=0;
-      fontdescriptor[c].yAdvance=0;
       fontdescriptor[c].offset=0;
       fontdescriptor[c].unicode=0;
     }
@@ -244,16 +279,15 @@ int main( int argc, char** argv )
   fprintf(file,"const FontDescriptor %s_%s_%dptDescriptors2[] PROGMEM = {\n", face->family_name, face->style_name, size);
   for(c=ft_minchar;c<=0xff;c++){
     //fprintf(file, "\t// U-%04x, %c\n", c, c);
-    fprintf(file, "\t{ (int8_t)0x%02x,\t(int8_t)0x%02x,\t(int8_t)0x%02x,\t(int8_t)0x%02x,\t(int8_t)0x%02x,\t(int8_t)0x%02x,\t(uint16_t)0x%04x,\t(uint16_t)0x%04x}", 
+    fprintf(file, "\t{ (int8_t)0x%02x,\t(int8_t)0x%02x,\t(int8_t)0x%02x,\t(int8_t)0x%02x,\t(int8_t)0x%02x,\t(uint16_t)0x%04x,\t(uint16_t)0x%04x}", 
         fontdescriptor[c].xMin, 
         fontdescriptor[c].xMax, 
         fontdescriptor[c].yMin, 
         fontdescriptor[c].yMax, 
         fontdescriptor[c].xAdvance, 
-        fontdescriptor[c].yAdvance, 
         fontdescriptor[c].offset,
         fontdescriptor[c].unicode,
-        c,c);
+        c);
   
     c<0xff?fprintf(file,",\t// U-%04x, %c\n",c,c==92?0x20:c):fprintf(file,"\t// U-%04x, %c\n",c,c);
   }
@@ -263,3 +297,5 @@ int main( int argc, char** argv )
   FT_Done_FreeType( library );
   return(0);
 }
+
+

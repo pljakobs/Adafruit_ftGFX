@@ -98,8 +98,8 @@ class Adafruit_GFX : public Print {
     fontKern;
   const unsigned char* fontData;
   const FontDescriptor* fontDesc;
-  boolean
-    wrap; // If set, 'wrap' text at right edge of display
+  const fontProperties* fontProp;
+  boolean wrap; // If set, 'wrap' text at right edge of display
 };
 
 #endif // _ADAFRUIT_GFX_H
