@@ -86,31 +86,34 @@ extern const FontDescriptor Open_Sans_Bold_16ptDescriptors2[];
 extern const fontProperties Open_Sans_Bold_18ptProperties;
 extern const unsigned char Open_Sans_Bold_18ptBitmaps[];
 extern const FontDescriptor Open_Sans_Bold_18ptDescriptors2[];
-
+/*
 #include "./Fonts/Open_Sans_Bold_20pt.h"
 #define OPENSANSBOLD_20 6
 extern const unsigned char Open_Sans_Bold_20ptBitmaps[];
 extern const FontDescriptor Open_Sans_Bold_20ptDescriptors2[];
 extern const fontProperties Open_Sans_Bold_20ptProperties;
-
+*/
+/*
 #include "./Fonts/Open_Sans_Bold_24pt.h"
 #define OPENSANSBOLD_24 8
 extern const fontProperties Open_Sans_Bold_24ptProperties;
 extern const unsigned char Open_Sans_Bold_24ptBitmaps[];
 extern const FontDescriptor Open_Sans_Bold_24ptDescriptors2[];
-
+*/
+/*
 #include "./Fonts/Open_Sans_Bold_28pt.h"
 #define OPENSANSBOLD_28 10
 extern const fontProperties Open_Sans_Bold_28ptProperties;
 extern const unsigned char Open_Sans_Bold_28ptBitmaps[];
 extern const FontDescriptor Open_Sans_Bold_28ptDescriptors2[];
-
+*/
+/*
 #include "./Fonts/Open_Sans_Bold_36pt.h"
 #define OPENSANSBOLD_36 10
 extern const fontProperties Open_Sans_Bold_36ptProperties;
 extern const unsigned char Open_Sans_Bold_36ptBitmaps[];
 extern const FontDescriptor Open_Sans_Bold_36ptDescriptors2[];
-
+*/
 /*
 #include "./Fonts/Segment7_Standard_12pt.h"
 #define SEGMENT7_12 11
