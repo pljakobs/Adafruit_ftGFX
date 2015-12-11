@@ -1,4 +1,4 @@
-const fontProperties Open_Sans_Regular_16ptProperties PROGMEM = {(uint8_t)0x22, (uint8_t)0x22, (int8_t)0xfffffff6, (int8_t)0xfffffffc, (uint8_t)0x01, (uint16_t)0x0000, "Open_Sans", "Regular"};
+const fontProperties Open_Sans_Regular_16ptProperties = {(uint8_t)0x22, (uint8_t)0x1b, (int8_t)0xfffffff9, (int8_t)0xfffffffc, (uint8_t)0x01, (uint16_t)0x0000, "Open_Sans", "Regular"};
 const unsigned char Open_Sans_Regular_16ptBitmaps[] PROGMEM = {
  // Offset: 0x0000 width: 00 (00-00) height: 00 (00-00) xAdvance: 07 yAdvance: 00 
 // 0x20, U-0020,  

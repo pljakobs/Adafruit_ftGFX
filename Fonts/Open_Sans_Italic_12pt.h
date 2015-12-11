@@ -1,4 +1,4 @@
-const fontProperties Open_Sans_Italic_12ptProperties PROGMEM = {(uint8_t)0x1a, (uint8_t)0x22, (int8_t)0xfffffff6, (int8_t)0xfffffffc, (uint8_t)0x01, (uint16_t)0x0000, "Open_Sans", "Italic"};
+const fontProperties Open_Sans_Italic_12ptProperties = {(uint8_t)0x1a, (uint8_t)0x14, (int8_t)0xfffffffa, (int8_t)0xfffffffc, (uint8_t)0x01, (uint16_t)0x0000, "Open_Sans", "Italic"};
 const unsigned char Open_Sans_Italic_12ptBitmaps[] PROGMEM = {
  // Offset: 0x0000 width: 00 (00-00) height: 00 (00-00) xAdvance: 05 yAdvance: 00 
 // 0x20, U-0020,  

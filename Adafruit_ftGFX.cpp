@@ -667,8 +667,8 @@ void Adafruit_GFX::drawChar(int16_t x, int16_t y, unsigned char c,
   drawRect(x            ,y-ft_fp.ascender  ,ft_fd.xAdvance ,ft_fp.height , 0xffff);
   */
   y+=ft_fp.ascender;
-  fillRect(x            ,y ,ft_fd.xAdvance ,ft_fp.height , bg);
-  drawRect(x            ,y ,ft_fd.xAdvance ,ft_fp.height , 0xffff);
+  fillRect(x            ,y-ft_fp.ascender ,ft_fd.xAdvance ,ft_fp.height , bg);
+  //drawRect(x            ,y-ft_fp.ascender ,ft_fd.xAdvance ,ft_fp.height , 0xff00);
 	for(uint8_t i=0; i<ft_height;i++){
 		(ft_width%8)?ft_byte_count=(ft_width >> 3)+1:ft_byte_count=ft_width >> 3; 
 		//Serial.printf("	byte_count: 0x%02x\n", ft_byte_count);
@@ -676,7 +676,7 @@ void Adafruit_GFX::drawChar(int16_t x, int16_t y, unsigned char c,
 			uint8_t bitline=pgm_read_byte(fontData+ft_offset++);
 			//Serial.printf("bitline: 0x%02x, ",bitline);
 			for(uint8_t k=7;k>=0 && k<8;k--){
-				(bitline & 1<<k)?drawPixel(x+ft_fd.xMin+(j+1)*8-k,y-ft_fd.yMax+i,color):drawPixel(x+ft_fd.xMin+(j+1)*8-k,y-ft_fd.yMax+i,bg);
+				if(bitline & 1<<k)drawPixel(x+ft_fd.xMin+(j+1)*8-k,y-ft_fd.yMax+i,color);
 				//(bitline & (1<<k))?Serial.printf("@"):Serial.printf(".");
 			}
 		}
@@ -684,7 +684,7 @@ void Adafruit_GFX::drawChar(int16_t x, int16_t y, unsigned char c,
 	}
   Serial.print("====================\n");
   //Serial.printf("x: %d\ny: %d\nw: %d\nh: %d\n", x, y-ft_fd.yAdvance-ft_fd.yMin, ft_fd.xAdvance, ft_fd.yAdvance);
-  drawRect(x            ,y-ft_fp.ascender  ,ft_fd.xAdvance ,ft_fp.height , 0xffff);
+  //drawRect(x            ,y-ft_fp.ascender ,ft_fd.xAdvance ,ft_fp.height , 0xff00);
 
 }
 

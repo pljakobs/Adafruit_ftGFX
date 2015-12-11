@@ -161,16 +161,24 @@ int main( int argc, char** argv )
   fprintf(textfile,"found %d charmaps\n", cm);
   
   FT_Set_Char_Size(face, size<<6,0,dpi,0);
+
   fontProperties.height=face->size->metrics.height>>6;
-  fontProperties.ascender=face->ascender>>6;
-  fontProperties.descender=face->descender>>6;
+  fontProperties.ascender=face->size->metrics.ascender>>6;
+  fontProperties.descender=face->size->metrics.descender>>6;
   fontProperties.underline_position=face->underline_position>>6;
   fontProperties.underline_thickness=face->underline_thickness>>6;
 
-  fprintf(file,"const unsigned char %s_%s_%dptProperties PROGMEM = {",face->family_name, face->style_name, size);
-  fprintf(file,"0x%02x, 0x%02x, 0x%02x, 0x%02x, 0x%02x, 0x%04x, '%s', '%s'};\n",fontProperties.height, fontProperties.ascender, fontProperties.descender, fontProperties.underline_position, fontProperties.underline_thickness, fontProperties.flags, fontProperties.family,fontProperties.style);
+  fprintf(textfile,"const fontProperties %s_%s_%dptProperties = {",face->family_name, face->style_name, size);
+  fprintf(textfile,"\t(uint8_t)height\t%d,\n\t(uint8_t)ascender\t%d,\n\t(int8_t)descender\t%d,\n\t(int8_t)uline_pos\t%d,\n\t(uint8_t)uline_width%d,\n\t(uint16_t)flags\t0x%04x,\n\tname\t\"%s\",\n\tstyle\t\"%s\"};\n",fontProperties.height, fontProperties.ascender, fontProperties.descender, fontProperties.underline_position, fontProperties.underline_thickness, fontProperties.flags, fontProperties.family,fontProperties.style);
 
-  fprintf(file,"const unsigned char %s_%s_%dptBitmaps[] PROGMEM = {\n",face->family_name, face->style_name, size);
+
+  fprintf(file,"const fontProperties %s_%s_%dptProperties = {",face->family_name, face->style_name, size);
+  fprintf(file,"(uint8_t)0x%02x, (uint8_t)0x%02x, (int8_t)0x%02x, (int8_t)0x%02x, (uint8_t)0x%02x, (uint16_t)0x%04x, \"%s\", \"%s\"};\n",fontProperties.height, fontProperties.ascender, fontProperties.descender, fontProperties.underline_position, fontProperties.underline_thickness, fontProperties.flags, fontProperties.family,fontProperties.style);
+
+  fprintf(stderr,"const fontProperties %s_%s_%dptProperties = {",face->family_name, face->style_name, size);
+  fprintf(stderr,"\t(uint8_t)height\t%d,\n\t(uint8_t)ascender\t%d,\n\t(int8_t)descender\t%d,\n\t(int8_t)uline_pos\t%d,\n\t(uint8_t)uline_width%d,\n\t(uint16_t)flags\t0x%04x,\n\tname\t\"%s\",\n\tstyle\t\"%s\"};\n",fontProperties.height, fontProperties.ascender, fontProperties.descender, fontProperties.underline_position, fontProperties.underline_thickness, fontProperties.flags, fontProperties.family,fontProperties.style);
+
+ fprintf(file,"const unsigned char %s_%s_%dptBitmaps[] PROGMEM = {\n",face->family_name, face->style_name, size);
  
   offset=0;
   uint8_t ft_minchar=0x20;
@@ -202,10 +210,6 @@ int main( int argc, char** argv )
       fontdescriptor[c].yMax     = bbox.yMax;
       fontdescriptor[c].offset   = offset;
       fontdescriptor[c].xAdvance = slot->advance.x>>6;
-      //fontdescriptor[c].yAdvance = face->size->metrics.height>>6;
-      //fontdescriptor[c].yAdvance = slot->advance.y/64;
-      //fontdescriptor[c].xAdvance = face->glyph->linearHoriAdvance/64;
-      //fontdescriptor[c].yAdvance = face->glyph->linearVertAdvance/64;
       fontdescriptor[c].unicode  = FF_encoding[c];
 
       int doc_yMax  = bbox.yMax;
@@ -275,7 +279,7 @@ int main( int argc, char** argv )
   fprintf(file,"const FontDescriptor %s_%s_%dptDescriptors2[] PROGMEM = {\n", face->family_name, face->style_name, size);
   for(c=ft_minchar;c<=0xff;c++){
     //fprintf(file, "\t// U-%04x, %c\n", c, c);
-    fprintf(file, "\t{ (int8_t)0x%02x,\t(int8_t)0x%02x,\t(int8_t)0x%02x,\t(int8_t)0x%02x,\t(int8_t)0x%02x,\t(int8_t)0x%02x,\t(uint16_t)0x%04x,\t(uint16_t)0x%04x}", 
+    fprintf(file, "\t{ (int8_t)0x%02x,\t(int8_t)0x%02x,\t(int8_t)0x%02x,\t(int8_t)0x%02x,\t(int8_t)0x%02x,\t(uint16_t)0x%04x,\t(uint16_t)0x%04x}", 
         fontdescriptor[c].xMin, 
         fontdescriptor[c].xMax, 
         fontdescriptor[c].yMin, 
@@ -283,7 +287,7 @@ int main( int argc, char** argv )
         fontdescriptor[c].xAdvance, 
         fontdescriptor[c].offset,
         fontdescriptor[c].unicode,
-        c,c);
+        c);
   
     c<0xff?fprintf(file,",\t// U-%04x, %c\n",c,c==92?0x20:c):fprintf(file,"\t// U-%04x, %c\n",c,c);
   }

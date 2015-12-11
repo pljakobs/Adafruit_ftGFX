@@ -5,6 +5,14 @@ Checking embedding flags 8
   can be embedded for editing, preview and printing
 current charmap: 3, 1
 found 1 charmaps
+const fontProperties Open_Sans_Bold_Italic_8ptProperties = {	(uint8_t)height	18,
+	(uint8_t)ascender	14,
+	(int8_t)descender	-4,
+	(int8_t)uline_pos	-4,
+	(uint8_t)uline_width1,
+	(uint16_t)flags	0x0000,
+	name	"Open_Sans",
+	style	"Bold_Italic"};
 /***********************************************
 *
 * Next char: 0x20, 32,   
