@@ -124,6 +124,15 @@ void Adafruit_GFX::setFont(uint8_t f) {
 		fontKern = 0;
 		break;
 	#endif
+
+	#ifdef OPENSANSBOLD_36
+	case OPENSANSBOLD_36:
+		fontProp = &Open_Sans_Bold_36ptProperties;
+		fontData = Open_Sans_Bold_36ptBitmaps;
+		fontDesc = Open_Sans_Bold_36ptDescriptors2;
+		fontKern = 0;
+		break;
+	#endif
 	
 	#ifdef SEGMENT7_24
 	case SEGMENT7_24:
