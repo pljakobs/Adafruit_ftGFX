@@ -62,27 +62,9 @@ void Adafruit_GFX::setFont(uint8_t f) {
   font = f;
   switch(font) {
 
- 	#ifdef SEGMENT7_24
-	case SEGMENT7_24:
-		fontProp = Segment7_Standard_24ptProperties;
-		fontData = Segment7_Standard_24ptBitmaps;
-		fontDesc = Segment7_Standard_24ptDescriptors2;
-		fontKern = 0;
-		break;
-	#endif
-	
- 	#ifdef SEGMENT7_36
-	case SEGMENT7_36:
-		fontProp = Segment7_Standard_36ptProperties;
-		fontData = Segment7_Standard_36ptBitmaps;
-		fontDesc = Segment7_Standard_36ptDescriptors2;
-		fontKern = 0;
-		break;
-	#endif
-	
-  #ifdef OPENSANSBOLD_10
+ 	#ifdef OPENSANSBOLD_10
 	case OPENSANSBOLD_10:
-		fontProp = Open_Sans_Bold_10ptProperties;
+		fontProp = &Open_Sans_Bold_10ptProperties;
 		fontData = Open_Sans_Bold_10ptBitmaps;
 		fontDesc = Open_Sans_Bold_10ptDescriptors2;
 		fontKern = 0;
@@ -91,7 +73,7 @@ void Adafruit_GFX::setFont(uint8_t f) {
 	
 	#ifdef OPENSANSBOLD_12
 	case OPENSANSBOLD_12:
-		fontProp = Open_Sans_Bold_12ptProperties;
+		fontProp = &Open_Sans_Bold_12ptProperties;
 		fontData = Open_Sans_Bold_12ptBitmaps;
 		fontDesc = Open_Sans_Bold_12ptDescriptors2;
 		fontKern = 0;
@@ -100,7 +82,7 @@ void Adafruit_GFX::setFont(uint8_t f) {
 	
 	#ifdef OPENSANSBOLD_14
 	case OPENSANSBOLD_14:
-		fontProp = Open_Sans_Bold_14ptProperties;
+		fontProp = &Open_Sans_Bold_14ptProperties;
 		fontData = Open_Sans_Bold_14ptBitmaps;
 		fontDesc = Open_Sans_Bold_14ptDescriptors2;
 		fontKern = 0;
@@ -109,7 +91,7 @@ void Adafruit_GFX::setFont(uint8_t f) {
 	
 	#ifdef OPENSANSBOLD_16
 	case OPENSANSBOLD_16:
-		fontProp = Open_Sans_Bold_16ptProperties;
+		fontProp = &Open_Sans_Bold_16ptProperties;
 		fontData = Open_Sans_Bold_16ptBitmaps;
 		fontDesc = Open_Sans_Bold_16ptDescriptors2;
 		fontKern = 0;
@@ -118,7 +100,7 @@ void Adafruit_GFX::setFont(uint8_t f) {
 	
 	#ifdef OPENSANSBOLD_18
 	case OPENSANSBOLD_18:
-		fontProp = Open_Sans_Bold_18ptProperties;
+		fontProp = &Open_Sans_Bold_18ptProperties;
 		fontData = Open_Sans_Bold_18ptBitmaps;
 		fontDesc = Open_Sans_Bold_18ptDescriptors2;
 		fontKern = 0;
@@ -127,7 +109,7 @@ void Adafruit_GFX::setFont(uint8_t f) {
 	
 	#ifdef OPENSANSBOLD_20
 	case OPENSANSBOLD_20:
-		fontProp = Open_Sans_Bold_20ptProperties;
+		fontProp = &Open_Sans_Bold_20ptProperties;
 		fontData = Open_Sans_Bold_20ptBitmaps;
 		fontDesc = Open_Sans_Bold_20ptDescriptors2;
 		fontKern = 0;
@@ -136,7 +118,7 @@ void Adafruit_GFX::setFont(uint8_t f) {
 	
 	#ifdef OPENSANSBOLD_24
 	case OPENSANSBOLD_24:
-		fontProp = Open_Sans_Bold_24ptProperties;
+		fontProp = &Open_Sans_Bold_24ptProperties;
 		fontData = Open_Sans_Bold_24ptBitmaps;
 		fontDesc = Open_Sans_Bold_24ptDescriptors2;
 		fontKern = 0;
@@ -145,7 +127,7 @@ void Adafruit_GFX::setFont(uint8_t f) {
 	
 	#ifdef SEGMENT7_24
 	case SEGMENT7_24:
-		fontProp = Segment7_Standard_24ptProperties;
+		fontProp = &Segment7_Standard_24ptProperties;
 		fontData = Segment7_Standard_24ptBitmaps;
 		fontDesc = Segment7_Standard_24ptDescriptors2;
 		fontKern = 0;
@@ -154,7 +136,7 @@ void Adafruit_GFX::setFont(uint8_t f) {
 	
 	#ifdef SEGMENT7_12
 	case SEGMENT7_12:
-		fontProp = Segment7_Standard_12ptProperties;
+		fontProp = &Segment7_Standard_12ptProperties;
 		fontData = Segment7_Standard_12ptBitmaps;
 		fontDesc = Segment7_Standard_12ptDescriptors2;
 		fontKern = 0;
@@ -163,7 +145,7 @@ void Adafruit_GFX::setFont(uint8_t f) {
 	
 	#ifdef SEGMENT7_36
 	case SEGMENT7_36:
-		fontProp = Segment7_Standard_36ptProperties;
+		fontProp = &Segment7_Standard_36ptProperties;
 		fontData = Segment7_Standard_36ptBitmaps;
 		fontDesc = Segment7_Standard_36ptDescriptors2;
 		fontKern = 0;
@@ -171,12 +153,12 @@ void Adafruit_GFX::setFont(uint8_t f) {
 	#endif
 
  	default:
-      font = OPENSANSBOLD_12;
-	  fontProp = Open_Sans_Bold_12ptProperties;
-      fontData = Open_Sans_Bold_12ptBitmaps;
+    font = OPENSANSBOLD_12;
+	  fontProp = &Open_Sans_Bold_12ptProperties;
+    fontData = Open_Sans_Bold_12ptBitmaps;
 	  fontDesc = Open_Sans_Bold_12ptDescriptors2;
-      fontKern = 0;
-      break;
+    fontKern = 0;
+     break;
   }
 
   //fontStart = pgm_read_byte(fontData+FONT_START);
@@ -185,8 +167,7 @@ void Adafruit_GFX::setFont(uint8_t f) {
 }
 
 // Draw a circle outline
-void Adafruit_GFX::drawCircle(int16_t x0, int16_t y0, int16_t r,
-    uint16_t color) {
+void Adafruit_GFX::drawCircle(int16_t x0, int16_t y0, int16_t r, uint16_t color) {
   int16_t f = 1 - r;
   int16_t ddF_x = 1;
   int16_t ddF_y = -2 * r;
@@ -506,21 +487,21 @@ uint16_t Adafruit_GFX::getStringWidth(String s){
 	return w;
 }
 
-uint8_t Adafruit_GFX::getCharHeight(char c){
-	return (pgm_read_byte(&fontProp.height);
+uint8_t Adafruit_GFX::getCharHeight(){
+	return (fontProp->height);
 	}
 	
 size_t Adafruit_GFX::write(uint8_t c) {
   
   if (c == 0x0a || c == 0x0c) {
-    cursor_y += pgm_read_byte(&fontProp.height);	//all chars are same height so use height of space char
+    cursor_y += fontProp->height;	//all chars are same height so use height of space char
     cursor_x  = 0;
 	Serial.print("cr/lf\n");
   } else {
     drawFastChar(cursor_x, cursor_y, c, textcolor, textbgcolor, textsize); 				// draw character "c"
 
 	uint16_t w = pgm_read_byte(&fontDesc[c-0x20].xAdvance);							// get character width
-	uint16_t h = pgm_read_byte(&fontProp.height);							// get character height
+	uint16_t h = fontProp->height;							// get character height
     //if (fontKern > 0 && textcolor != textbgcolor) {										// if necessary, get kerning value
     //  fillRect(cursor_x+w*textsize,cursor_y,fontKern*textsize,h*textsize,textbgcolor);	// fill kenrning space
     //}
@@ -628,6 +609,7 @@ void Adafruit_GFX::drawChar(int16_t x, int16_t y, unsigned char c,
 	uint16_t ft_offset;
 	
 	FontDescriptor ft_fd;
+  fontProperties ft_fp;
 
 	//Serial.printf("==================================\nAdafruit_ftGFX::drawChar(0x%02x)=%c\n",c,c);
 	
@@ -639,26 +621,34 @@ void Adafruit_GFX::drawChar(int16_t x, int16_t y, unsigned char c,
 	ft_fd.xAdvance = pgm_read_byte(&fontDesc[c-0x20].xAdvance);
  	ft_fd.offset   = pgm_read_word(&fontDesc[c-0x20].offset);
 	ft_fd.unicode  = pgm_read_word(&fontDesc[c-0x20].unicode);
-	
-	/*
-	
+
+  ft_fp.height             = fontProp->height;
+  ft_fp.ascender           = fontProp->ascender+1;
+  ft_fp.descender          = fontProp->descender+1;
+  ft_fp.underline_position = fontProp->underline_position+1;
+  ft_fp.underline_thickness= fontProp->underline_thickness;
+  ft_fp.flags              = fontProp->flags;
+ 
 	Serial.printf("ft_fd{\n");
 	Serial.printf("	xMin %d\n", ft_fd.xMin);
 	Serial.printf("	xMax %d\n", ft_fd.xMax);
 	Serial.printf("	yMin %d\n", ft_fd.yMin);
-	Serial.printf("	yMax %d\n", ft_fd.yMax);
+	Serial.printf("	yMax %d}\n", ft_fd.yMax);
 
-	Serial.printf("	xAdvance  %d\n", ft_fd.xAdvance);
-	Serial.printf("	offet     0x%04x\n", ft_fd.offset);
-	Serial.printf("	unicode   u-%04x\n", ft_fd.unicode);
-	Serial.printf("}\n");
-	*/
-	
+  Serial.printf("ft_fp{\n");
+  Serial.printf(" height %d\n", ft_fp.height);
+  Serial.printf(" ascender %d\n", ft_fp.ascender);
+  Serial.printf(" descender %d\n", ft_fp.descender);
+  Serial.printf(" underline_position %d\n", ft_fp.underline_position);
+  Serial.printf(" underline_thickness %d\n", ft_fp.underline_thickness);
+  Serial.printf(" flags %d}\n", ft_fp.flags);
+  
 	ft_height  = ft_fd.yMax-ft_fd.yMin; 				// FontHeight
 	ft_width   = ft_fd.xMax-ft_fd.xMin;					// FontWidth
 	ft_offset  = ft_fd.offset;
-	
-  drawRect(x            ,y-pgm_read_byte(fontProperties.ascender)  ,ft_fd.xAdvance ,pgm_read_byte(fontProperties.height) , 0xffff);
+/*
+  fillRect(x            ,y-ft_fp.ascender  ,ft_fd.xAdvance ,ft_fp.height , bg);
+  drawRect(x            ,y-ft_fp.ascender  ,ft_fd.xAdvance ,ft_fp.height , 0xffff);
 	for(uint8_t i=0; i<ft_height;i++){
 		(ft_width%8)?ft_byte_count=(ft_width >> 3)+1:ft_byte_count=ft_width >> 3; 
 		//Serial.printf("	byte_count: 0x%02x\n", ft_byte_count);
@@ -674,7 +664,28 @@ void Adafruit_GFX::drawChar(int16_t x, int16_t y, unsigned char c,
 	}
   Serial.print("====================\n");
   //Serial.printf("x: %d\ny: %d\nw: %d\nh: %d\n", x, y-ft_fd.yAdvance-ft_fd.yMin, ft_fd.xAdvance, ft_fd.yAdvance);
-  drawRect(x            ,y-pgm_read_byte(fontProperties.ascender)  ,ft_fd.xAdvance ,pgm_read_byte(fontProperties.height) , 0xffff);
+  drawRect(x            ,y-ft_fp.ascender  ,ft_fd.xAdvance ,ft_fp.height , 0xffff);
+  */
+  y+=ft_fp.ascender;
+  fillRect(x            ,y ,ft_fd.xAdvance ,ft_fp.height , bg);
+  drawRect(x            ,y ,ft_fd.xAdvance ,ft_fp.height , 0xffff);
+	for(uint8_t i=0; i<ft_height;i++){
+		(ft_width%8)?ft_byte_count=(ft_width >> 3)+1:ft_byte_count=ft_width >> 3; 
+		//Serial.printf("	byte_count: 0x%02x\n", ft_byte_count);
+		for(uint8_t j=0; j<ft_byte_count;j++){
+			uint8_t bitline=pgm_read_byte(fontData+ft_offset++);
+			//Serial.printf("bitline: 0x%02x, ",bitline);
+			for(uint8_t k=7;k>=0 && k<8;k--){
+				(bitline & 1<<k)?drawPixel(x+ft_fd.xMin+(j+1)*8-k,y-ft_fd.yMax+i,color):drawPixel(x+ft_fd.xMin+(j+1)*8-k,y-ft_fd.yMax+i,bg);
+				//(bitline & (1<<k))?Serial.printf("@"):Serial.printf(".");
+			}
+		}
+		//Serial.printf("\n");
+	}
+  Serial.print("====================\n");
+  //Serial.printf("x: %d\ny: %d\nw: %d\nh: %d\n", x, y-ft_fd.yAdvance-ft_fd.yMin, ft_fd.xAdvance, ft_fd.yAdvance);
+  drawRect(x            ,y-ft_fp.ascender  ,ft_fd.xAdvance ,ft_fp.height , 0xffff);
+
 }
 
 void Adafruit_GFX::setCursor(int16_t x, int16_t y) {
